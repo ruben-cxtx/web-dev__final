@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+    font-family: "Inter Tight", sans-serif;
+    font-size: clamp(14px, 1.2vw, 16px);
+}
+
+
+
+:root {
+    --font-size-title: clamp(1.6rem, 4vw, 2.5rem);
+    --font-size-sub-title: clamp(1.25rem, 2vw, 1.8rem); /* 20px -> 36px */
+    --font-size-text: clamp(0.95rem, 1.6vw, 1.125rem);   /* 15px -> 18px */
+    --font-bold: 600;
+    --font-normal: 300;
+    --font-light: 100;
+
+    --line-height-title: 1.1;
+    --line-height-text: 1.2;
+    --letter-spacing: 0.02em;
+    --fs-title-clamp: clamp(1.6rem, 4vw, 3.5rem);
+
+    --color-primary: #f7f7f7;
+    --color-secondary: #212121;
+    --color-red: #e71a1a;
+    --color-red-highlight: #e71a1a8e;
+    --color-blue: #005eff;
+    --color-blue-highlight: #005eff80;
+    --color-button-not-active: #717171;
+
+    --space-xxs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-xxl: 3rem;
+
+    --bp-sm: 480px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
+
+    --duration-fast: 150ms;
+    --duration-medium: 300ms;
+    --duration-slow: 500ms;
+}
