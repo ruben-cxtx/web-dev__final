@@ -56,3 +56,113 @@ html {
     --duration-medium: 300ms;
     --duration-slow: 500ms;
 }
+
+
+
+
+/*-----footer-------*/
+
+footer {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+    grid-template-areas:
+        "contact contact button"
+        "contact contact social"
+        "copyright copyright copyright";
+    padding: var(--space-lg) var(--space-lg) 0.5rem var(--space-lg);
+
+}
+
+@media (min-width: 48em){
+    footer {
+        grid-template-areas:
+        "contact button social"
+        "contact button social"
+        "copyright copyright copyright";
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+.footer__contact {
+    grid-area: contact;
+    width: 90%;
+    font-size: clamp(0.7em, 2vw, 1.2em);
+    letter-spacing: var(--letter-spacing);
+}
+
+.footer__contact h3 {
+    margin-bottom: 0.5em;
+}
+
+.footer__contact span {
+    color: #d1d0d0;
+}
+
+.footer__social-media {
+    grid-area: social;
+    width: 90%;
+    font-size: clamp(1em, 3vw, 2.5em);
+    text-align: center;
+}
+.footer__social-media > i {
+    color: #b2b2b2;
+    transition: color 500ms ease;
+}
+
+.footer__social-media > i:hover {
+    color: var(--color-primary);
+}
+
+.footer__top-button {
+    grid-area: button;
+    width: 90%;
+    text-align: center;
+}
+
+.top-button {
+    padding: 0.4em 0.8em;
+    border-radius: 0.5em;
+    font-size: clamp(1em, 3vw, 2em);
+    border: none;
+    background: var(--color-primary);
+    transition: transform var(--duration-fast) var(--timing-default),
+                box-shadow var(--duration-fast) var(--timing-default),
+                filter var(--duration-fast) var(--timing-default);
+    box-shadow: 0 3px 0 rgba(0,0,0,0.06);
+    will-change: transform, box-shadow;
+}
+
+.top-button:active {
+    transform: translateY(1px) scale(0.995);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04), inset 0 2px 6px rgba(0,0,0,0.06);
+    filter: brightness(0.98);
+}
+
+
+.top-button[aria-pressed="true"] {
+    transform: translateY(1px) scale(0.995);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04), inset 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.top-button:focus-visible {
+    outline: 3px solid var(--color-blue-highlight);
+    outline-offset: 2px;
+}
+
+.footer__copyr {
+    grid-area: copyright;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1em;
+    font-size: clamp(0.3em, 2vw, 1em);
+}
