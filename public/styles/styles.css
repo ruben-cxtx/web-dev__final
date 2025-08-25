@@ -332,19 +332,19 @@ footer {
 
 .hero-home img {
     width: 100%;
-    height: 20vh;
+    height: 18vh;
     object-fit: cover;
 }
 
 @media (min-width: 48em) {
     .hero-home {
-        grid-column: span 3;
+        grid-column: span 2;
         margin-left: 1em;
     }
 
     .hero-home img {
-        width: 90%;
-        height: 40vh;
+        width: 70%;
+        height: 30vh;
     }
 }
 
@@ -353,6 +353,8 @@ footer {
 
 .about {
     padding: 2em;
+    grid-column: span 2;
+    align-content: end;
 }
 
 .subtitle {
@@ -360,6 +362,7 @@ footer {
     font-size: var(--font-size-sub-title);
     letter-spacing: var(--letter-spacing);
     margin-bottom: 1.2em;
+    text-align: center;
 }
 .about__container {
     border: 2px solid black;
@@ -386,3 +389,64 @@ footer {
 .about__container__text img {
     width: 80%;
 }
+
+/* ---- articles grid ---- */
+.articles {
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.articles__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 400px));
+  gap: var(--space-lg);
+  align-items: stretch;
+  margin-top: var(--space-md);
+}
+
+.article__card {
+  border-radius: 20px;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+
+.article__card img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.x-small-text {
+  font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+  color: var(--color-button-not-active);
+  letter-spacing: var(--letter-spacing);
+  border-top: 1px solid black;
+  padding-top: 1em;
+}
+
+.btn-read-more {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.5rem 0.9rem;
+  border: 2px solid var(--color-secondary);
+  border-radius: 9999px;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  transition: background var(--duration-medium) ease, color var(--duration-medium) ease;
+}
+
+.btn-read-more:hover,
+.btn-read-more:focus-visible {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  outline: 3px solid var(--color-blue-highlight);
+  outline-offset: 2px;
+}
+
+.btn-read-more i { line-height: 1; }
+.btn-read-more i[aria-hidden="true"] { pointer-events: none; }

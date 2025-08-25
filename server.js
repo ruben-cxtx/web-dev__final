@@ -1,5 +1,6 @@
 import express from "express";
 import path from "node:path";
+import fs from 'fs/promises';
 import dotenv from "dotenv";
 import axios from "axios";
 import { urlencoded } from "express";
@@ -34,12 +35,17 @@ app.get("/", async (req, res) => {
             flag: panama.flags.png,
             alt: panama.flags.alt,
         }
-        console.log(panamaInfo)
 
-        res.render('index', { panamaInfo });
+        const raw = await fs.readFile('./public/information/articles.json', 'utf-8');
+        const articles = JSON.parse(raw);
+
+
+        console.log(panamaInfo, articles)
+
+        res.render('index', { panamaInfo, articles: articles.articles });
     } catch (err) {
-        console.error('Failed to fetch Panama data:', error.message);
-        res.render('pages/home', { panamaInfo: null });
+        console.error('Failed to fetch Panama data:', err.message);
+        res.render('index', { panamaInfo: null });
     }
 });
 

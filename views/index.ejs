@@ -44,6 +44,50 @@
         </div>
     </section>
     </main>
+    <section class="articles">
+        <h2>Articles</h2>
+        <div class="articles__container">
+            <% articles.forEach(article => { %>
+                <div class="article__card">
+                    <img src="<%= article.img %>" alt="<%= article.alt %>">
+                    <h4 class="x-small-text"><%= article.sm_title %></h4>
+                    <h3 class="small-title"><%= article.title %></h3>
+                    <p class="text"><%= article.text %>..</p>
+                    <button class="btn-read-more" type="button" aria-label="Read more about <%= article.title %>"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span> Read more</span></button>
+                </div>
+            <%  }); %>
+        </div>
+    </section>
+    <section class="stories">
+        <h2>Share your Story</h2>
+        <p>Share with the world core memories
+        you’ve had using the internet when
+        you were younger!</p>
+        <form action="/submit" method="post" class="form-story">
+            <label for="title">Title</label>
+            <input name="title" type="text" placeholder="Title..." id="title" required>
+            <label for="text">Story</label>
+            <textarea id="story" name="story" rows="5" cols="33"></textarea>
+        </form>
+        <div class="stories__container">
+            <% if(stories.length < 0) { %>
+                <h3>No stories yet!</h3>
+                <% } else { %>
+                    <% stories.forEach(story => { %>
+                        <div class="story__card">
+                            <div class="user-info">
+                            <img src="<%= story.avatar %>" alt="avatar">
+                            <h4 class="username"><%= story.user %></h4>
+                            </div>
+                            <div class="story-text">
+                                <h3><%= story.title %></h3>
+                                <p><%= story.text %></p>
+                            </div>
+                        </div>
+                        <% }) %>
+                    <% } %>
+        </div>
+    </section>
     <%- include("partials/footer") %>
     <script src="/js/home.js"></script>
 </body>

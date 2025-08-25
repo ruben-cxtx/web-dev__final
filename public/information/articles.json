@@ -1,0 +1,32 @@
+{
+  "articles": [
+    {
+      "sm_title": "Timeline",
+      "title": "Internet Evolution",
+      "img": "/assets/timeline.jpg",
+      "alt": "Starlink satellite coverage over Panama",
+      "text": "An overview of Panama\u2019s internet journey from dial-up to 5G. Explore major milestones, broadband expansion, and government policy shaping connectivity from 2001 to 2024."
+    },
+    {
+      "sm_title": "Infrastructure",
+      "title": "Digital Backbone",
+      "img": "/assets/infrastructure.jpg",
+      "alt": "Telecommunication towers and Panama City skyline",
+      "text": "Understand how Panama built its digital backbone: submarine cables, broadband growth, mobile internet, and the evolution of ISPs and mobile operators through competition and mergers."
+    },
+    {
+      "sm_title": "Inclusion",
+      "title": "Connecting All",
+      "img": "/assets/inclusion.jpg",
+      "alt": "Students using computers in a rural school in Panama",
+      "text": "Discover Panama\u2019s public access programs\u2014Infoplazas, Internet Para Todos, AIG\u2014and digital policies that improved access for underserved communities from 2004 to 2030."
+    },
+    {
+      "sm_title": "Economy",
+      "title": "Digital Growth",
+      "img": "/assets/economy.jpg",
+      "alt": "Smart city visual with digital icons over Panama City",
+      "text": "See how e-commerce, fintech, and digital entrepreneurship reshaped Panama\u2019s economy. Includes fintech apps, Startup Panama, and growth trends from 2018 to 2024 and beyond."
+    }
+  ]
+}
