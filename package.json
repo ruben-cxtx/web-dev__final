@@ -1,0 +1,28 @@
+{
+  "name": "web-dev__final",
+  "version": "1.0.0",
+  "description": "Final project of web development course, I'll be using HTML, CSS, JS, Node, Express, API's and some other cool stuff",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruben-cxtx/web-dev__final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ruben-cxtx/web-dev__final/issues"
+  },
+  "homepage": "https://github.com/ruben-cxtx/web-dev__final#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
