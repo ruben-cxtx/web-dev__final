@@ -5,6 +5,7 @@ import { urlencoded } from "express";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
+
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
@@ -13,7 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 app.use(urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
