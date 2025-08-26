@@ -45,7 +45,7 @@
     </section>
     </main>
     <section class="articles">
-        <h2>Articles</h2>
+        <h2 class="subtitle">Articles</h2>
         <div class="articles__container">
             <% articles.forEach(article => { %>
                 <div class="article__card">
@@ -59,29 +59,34 @@
         </div>
     </section>
     <section class="stories">
-        <h2>Share your Story</h2>
-        <p>Share with the world core memories
+        <div class="stories__main">
+        <div class="stories-text">
+        <h2 class="subtitle">Share your Story</h2>
+        <p class="text">Share with the world core memories
         you’ve had using the internet when
         you were younger!</p>
+        </div>
         <form action="/submit" method="post" class="form-story">
             <label for="title">Title</label>
             <input name="title" type="text" placeholder="Title..." id="title" required>
-            <label for="text">Story</label>
-            <textarea id="story" name="story" rows="5" cols="33"></textarea>
+            <label for="story">Story</label>
+            <textarea id="story" name="story" rows="5" cols="33" placeholder="Your amazing story..."></textarea>
+            <button type="submit" class="btn-submit">Submit</button>
         </form>
+        </div>
         <div class="stories__container">
-            <% if(stories.length < 0) { %>
+            <% if (stories.length === 0) { %>
                 <h3>No stories yet!</h3>
                 <% } else { %>
                     <% stories.forEach(story => { %>
                         <div class="story__card">
                             <div class="user-info">
-                            <img src="<%= story.avatar %>" alt="avatar">
+                            <div class="avatar"><%- story.avatar %></div>
                             <h4 class="username"><%= story.user %></h4>
                             </div>
                             <div class="story-text">
                                 <h3><%= story.title %></h3>
-                                <p><%= story.text %></p>
+                                <p><%= story.story %></p>
                             </div>
                         </div>
                         <% }) %>

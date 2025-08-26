@@ -4,8 +4,7 @@
   "description": "Final project of web development course, I'll be using HTML, CSS, JS, Node, Express, API's and some other cool stuff",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "nodemon --ignore public/information/stories.json server.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +19,16 @@
   },
   "homepage": "https://github.com/ruben-cxtx/web-dev__final#readme",
   "dependencies": {
+    "@dicebear/core": "^9.2.4",
+    "@dicebear/fun-emoji": "^9.2.4",
     "axios": "^1.11.0",
     "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0",
+    "nodemon": "^3.1.10",
+    "sillyname": "^0.1.0",
+    "uuid": "^11.1.0"
   }
 }
