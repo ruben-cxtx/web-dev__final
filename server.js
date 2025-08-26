@@ -45,8 +45,7 @@ async function loadStories() {
     for (const s of list) {
       const id = randomUUID();
       const user = generateName();
-      const avatarSVG =
-        s.avatar ?? createAvatar(funEmoji, { seed: user, size: 64, radius: 50 }).toString();
+      const avatarSVG = createAvatar(funEmoji, { seed: user, size: 64, radius: 50 }).toString();
 
       stories.set(id, {
         user,
@@ -128,6 +127,10 @@ app.post("/submit", async (req, res) => {
             res.status(500).send("Could not save story");
     }
 })
+
+app.get('/timeline', (req, res) => {
+   res.render('timeline') ;
+});
 
 
 app.listen(PORT, async () => {
