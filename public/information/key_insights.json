@@ -1,0 +1,29 @@
+{
+  "keyInsights": [
+    {
+      "subtitle": "Penetration",
+      "title": "7% \u2192 82%",
+      "text": "Panama's internet penetration rose from 7% in 2001 to nearly 82% in 2025, driven by policy reforms, market competition, and public Wi-Fi initiatives."
+    },
+    {
+      "subtitle": "Public Wi-Fi",
+      "title": "Internet para Todos",
+      "text": "Government-led programs like 'Internet Para Todos' and Infoplazas provided free access in cities and rural areas, reducing the digital divide."
+    },
+    {
+      "subtitle": "Mobile",
+      "title": "158% (2014)",
+      "text": "Panama moved from EDGE in the 2000s to nationwide 4G and early 5G trials by 2024, with 95% population coverage and 118% mobile penetration."
+    },
+    {
+      "subtitle": "ISP Market",
+      "title": "Duopoly by 2022",
+      "text": "The telecom sector consolidated into a duopoly (Tigo and C&W+Claro) by 2022 after Digicel's exit. Foreign investment drove infrastructure upgrades."
+    },
+    {
+      "subtitle": "Digital Strategy",
+      "title": "2024\u20132030 Plan",
+      "text": "The 2024\u20132030 strategic plan promotes AI, IoT, and fintech, aiming for full broadband coverage and a cash-light, digitally inclusive economy."
+    }
+  ]
+}

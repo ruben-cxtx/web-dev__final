@@ -31,6 +31,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+function alternateColors(num1, num2, count) {
+    let result = [];
+    for (let i = 0; i < count; i++) {
+        result.push(i % 2 === 0 ? "blue" : "red");
+    }
+    return result;
+}
 
 const stories = new Map();
 
@@ -128,8 +135,33 @@ app.post("/submit", async (req, res) => {
     }
 })
 
-app.get('/timeline', (req, res) => {
-   res.render('timeline') ;
+app.get('/timeline', async (req, res) => {
+    let insights = { insights: [] };
+    let timelineData = { timeline: [] };
+
+
+
+// console.log(alternateNumbers(1, 2, 4)); Output: ['blue', 'red', 'blue', 'red']
+
+
+    try {
+        const raw_insights = await fs.readFile('./public/information/key_insights.json', 'utf-8');
+        const raw_time = await fs.readFile('./public/information/timeline.json', 'utf-8');
+
+        insights = JSON.parse(raw_insights);
+        const keyInsights = insights.keyInsights;
+        timelineData = JSON.parse(raw_time);
+        const timeline = timelineData.timeline;
+
+        const colors = alternateColors(1, 2, timeline.length);
+        console.log(colors)
+        res.render('timeline', {keyInsights, timeline, colors});
+    } catch(err) {
+        console.log("Couldn't fetch data for insights and timeline. Error: ", err.message);
+        res.status(404).send("Couldn't Load files");
+    }
+
+
 });
 
 
@@ -138,3 +170,6 @@ app.listen(PORT, async () => {
 
     console.log(`App running on port ${PORT}`);
 })
+
+
+

@@ -1,0 +1,111 @@
+.hero-timeline {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    margin-bottom: var(--space-sm);
+}
+
+.img {
+    width: 100vw;
+}
+
+@media (min-width: 48em) {
+    .hero-timeline {
+        background-image: url("/assets/timeline-hero.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 30vh;
+        display: flex;
+        align-items: end;
+    }
+
+    .hero-timeline img {
+        display: none;!important;
+    }
+
+    .hero-timeline__text {
+        text-align: right;
+        width: 50vw;
+    }
+
+    .hero-timeline__text h1,
+    .hero-timeline__text p {
+        color: var(--color-primary);
+    }
+}
+
+.cards__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+@media (min-width: 40em) {
+    .cards__container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-flow: wrap;
+        justify-content: start;
+        place-content: center;
+    }
+
+    .key-insights,
+    .timeline__container{
+        padding: 2em;
+    }
+}
+
+.ins__card {
+    width: clamp(250px, 60vw, 400px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    box-shadow: var(--shadow-sm);
+    border: var(--border);
+}
+
+
+.time__card {
+    width: clamp(250px, 60vw, 400px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    border: 2px solid var(--color-secondary);
+    border-radius: 0 0 12px 12px;
+}
+
+.time__year {
+    text-align: center;
+    height: 50px;
+    align-content: center;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+#blue {
+    background: var(--color-blue-highlight);
+}
+
+#red {
+    background: var(--color-red-highlight);
+}
+
+
+
+.time__text {
+    padding: var(--space-sm);
+}
+
+.time__text p {
+    margin-top: var(--space-xs);
+}
+
+
+

@@ -84,6 +84,22 @@ nav {
     min-width: 0;
 }
 
+.highlight-blue,
+.highlight-red {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 0.1em;
+    line-height: 1.4;
+}
+
+.highlight-blue {
+    background: linear-gradient(to top, var(--color-blue-highlight) 50%, transparent 50%);
+}
+
+.highlight-red {
+    background: linear-gradient(to top, var(--color-red-highlight) 50%, transparent 50%);
+}
+
 nav > * { min-width: 0; }
 
 nav a {
@@ -325,6 +341,10 @@ footer {
     font-size: var(--font-size-sub-title);
     letter-spacing: var(--letter-spacing);
     margin-bottom: 0.6em;
+}
+
+.small-title {
+    width: fit-content;
 }
 
 
