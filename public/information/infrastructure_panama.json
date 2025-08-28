@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "last_updated": "2025-08-27",
+    "country": "Panama",
+    "notes": "Key milestones, spectrum, cables, public programs and 5G status for quick rendering in cards/timelines."
+  },
+  "timeline": [
+    {
+      "year": "early-2000s",
+      "title": "ADSL & Cable broadband arrive",
+      "text": "Urban Panama gets online primarily via DSL from Cable & Wireless and cable internet from Cable Onda."
+    },
+    {
+      "year": "2008",
+      "title": "New mobile competitors",
+      "text": "Claro and Digicel enter, intensifying competition alongside Movistar (+Movil/Cable & Wireless)."
+    },
+    {
+      "year": "2010",
+      "title": "‘Internet Para Todos’ / Red Nacional de Internet (RNI)",
+      "text": "Government-backed Wi-Fi program begins expanding public access points; complemented by Infoplazas community centers nationwide."
+    },
+    {
+      "year": "2014–2015",
+      "title": "700 MHz awards & first LTE launches",
+      "text": "Regulator assigns 700 MHz APT spectrum; +Movil (CWP) and Claro launch 4G LTE, improving coverage and speeds."
+    },
+    {
+      "year": "2018–2019",
+      "title": "Market consolidation (Millicom)",
+      "text": "Millicom acquires Cable Onda (2018) and Telefónica/Movistar Panama (2019), later rebranding to Tigo (2020)."
+    },
+    {
+      "year": "2022",
+      "title": "Claro integrated into +Movil (CWP)",
+      "text": "Cable & Wireless Panamá completes acquisition of Claro Panamá; Digicel files for liquidation and exits the market."
+    },
+    {
+      "year": "2023",
+      "title": "Starlink launches in Panama",
+      "text": "LEO satellite broadband becomes available nationwide, complementing rural connectivity initiatives."
+    },
+    {
+      "year": "2023–2024",
+      "title": "5G preparations & pilots",
+      "text": "+Movil (CWP) prepares and pilots 5G; ASEP later announces +Movil’s commercial 5G launch in Nov 2024. Tigo prepares 5G as well."
+    }
+  ],
+  "subsea_cables": [
+    {
+      "img_url": "https://www.submarinenetworks.com/images/figures/pccs-cable-route.jpg",
+      "name": "PCCS (Pacific Caribbean Cable System)",
+      "landings_in_panama": ["Balboa (Pacific)", "María Chiquita (Caribbean)"],
+      "rfs": "2015",
+      "notes": "6000 km trunk; connects Florida–Ecuador with branches; strengthens Panama’s dual-ocean hub role."
+    },
+    {
+      "img_url": "https://storage.googleapis.com/gweb-cloudblog-publish/images/Google_Cloud_Curie_subsea_cable.max-2600x2600.jpg",
+      "name": "Curie (Google)",
+      "landings_in_panama": ["Balboa (via Panama Digital Gateway)"],
+      "rfs": "2019–2020",
+      "notes": "US–Chile private cable with Panama branch; boosts capacity and latency via PDG CLS."
+    },
+    {
+      "img_url": "https://www.submarinenetworks.com/images/figures/maya-1-cable-route.jpg",
+      "name": "Maya-1",
+      "landings_in_panama": ["María Chiquita (Caribbean)"],
+      "rfs": "2000",
+      "notes": "Regional system linking US–Mexico–Central America–Colombia with a Panama landing."
+    },
+    {
+      "img_url": "https://www.submarinenetworks.com/images/figures/pac-cable-route.png",
+      "name": "Pan-American Crossing (PAC)",
+      "landings_in_panama": ["Fort Amador (Balboa)"],
+      "rfs": "2000",
+      "notes": "Self-healing ring linking US–Mexico–Central & South America with a Panama Pacific landing."
+    },
+    {
+      "img_url": "https://www.submarinenetworks.com/images/figures/sac-cable-network.jpg",
+      "name": "South American Crossing (SAC)",
+      "landings_in_panama": ["Colón (Caribbean)", "Fort Amador (Pacific)"],
+      "rfs": "2000",
+      "notes": "Dual-ocean presence around Panama; now part of larger regional networks."
+    }
+  ],
+  "ixp": [
+    {
+      "img_url": "https://intered.org.pa/wp-content/uploads/2022/11/logo-intered-hd.png",
+      "name": "InteRed Panamá (IXP)",
+      "location": "Panama Digital Gateway, Panama City",
+      "rfs": "2023",
+      "notes": "National Internet Exchange Point improving local traffic and latency; ties into Curie landing and backbone."
+    }
+  ],
+  "public_programs": [
+    {
+      "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.panama24horas.com.pa%2Fwp-content%2Fuploads%2F2017%2F08%2Fimage003.jpg&f=1&nofb=1&ipt=2e52e4def0c93f8b8e061814133d2f30087c9535ff8fdb36da2d4d0773c54cb3",
+      "name": "Infoplazas AIP",
+      "start_year": 2001,
+      "status": "active",
+      "footprint": "400+ community centers nationwide",
+      "notes": "Digital inclusion, training and access kiosks across provinces and comarcas."
+    },
+    {
+      "img_url": "https://internetparatodos.gob.pa/images/logo-big.png",
+      "name": "Red Nacional de Internet (RNI) / Internet para Todos",
+      "start_year": 2010,
+      "status": "active/upgrade cycles",
+      "notes": "Public Wi-Fi program coordinated by AIG; upgrades and coverage expansion supported by multilateral financing."
+    }
+  ],
+  "spectrum_and_5g": {
+    "regulator": "ASEP",
+    "highlights": [
+      "700 MHz (APT) awards enable wide-area LTE starting 2014–2015.",
+      "ASEP announced +Movil’s commercial 5G launch in Nov 2024; Tigo preparing 5G.",
+      "Operators also utilize PCS (1900 MHz) and AWS (1700/2100 MHz) holdings for 3G/4G."
+    ]
+  }
+}

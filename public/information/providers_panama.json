@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "last_updated": "2025-08-28",
+    "schema": "Brief provider cards with only essentials."
+  },
+  "providers": [
+    {
+      "id": "cwp_masmovil",
+      "brand": "+Movil (Cable & Wireless Panamá)",
+      "type": "mobile+fixed",
+      "status": "active",
+      "summary": "Incumbent; integrated Claro (2022); first commercial 5G in Panama (Nov 2024).",
+      "network": { "4g": "nationwide", "5g": "commercial" },
+      "website": "https://www.masmovilpanama.com/"
+    },
+    {
+      "id": "tigo",
+      "brand": "Tigo Panamá",
+      "type": "mobile+fixed",
+      "status": "active",
+      "summary": "Former Cable Onda + Movistar assets; strong HFC/FTTH; preparing 5G.",
+      "network": { "4g": "nationwide", "5g": "pre-launch" },
+      "website": "https://www.tigo.com.pa/"
+    },
+    {
+      "id": "claro",
+      "brand": "Claro Panamá (legacy)",
+      "type": "mobile",
+      "status": "integrated-into-cwp (2022)",
+      "summary": "Operations combined into +Movil in 2022.",
+      "network": { "4g": "historical", "5g": "n/a" },
+      "website": "https://www.claro.com.pa/"
+    },
+    {
+      "id": "digicel",
+      "brand": "Digicel Panamá (legacy)",
+      "type": "mobile",
+      "status": "exited (2022)",
+      "summary": "Prepaid-focused; exited after liquidation in 2022.",
+      "network": { "4g": "historical", "5g": "n/a" },
+      "website": "https://www.digicelgroup.com/"
+    },
+    {
+      "id": "movistar",
+      "brand": "Movistar Panamá (legacy)",
+      "type": "mobile",
+      "status": "rebranded-to-tigo (2020)",
+      "summary": "Telefónica brand sold to Millicom in 2019; rebranded to Tigo in 2020.",
+      "network": { "4g": "historical", "5g": "n/a" },
+      "website": "https://www.tigo.com.pa/"
+    }
+  ]
+}

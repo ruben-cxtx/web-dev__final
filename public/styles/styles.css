@@ -87,7 +87,6 @@ nav {
 .highlight-blue,
 .highlight-red {
     display: inline-block;
-    font-weight: bold;
     padding: 0 0.1em;
     line-height: 1.4;
 }

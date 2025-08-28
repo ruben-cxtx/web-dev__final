@@ -69,6 +69,7 @@
     gap: var(--space-md);
     box-shadow: var(--shadow-sm);
     border: var(--border);
+    padding: var(--space-lg);
 }
 
 

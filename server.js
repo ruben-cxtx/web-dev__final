@@ -141,9 +141,6 @@ app.get('/timeline', async (req, res) => {
 
 
 
-// console.log(alternateNumbers(1, 2, 4)); Output: ['blue', 'red', 'blue', 'red']
-
-
     try {
         const raw_insights = await fs.readFile('./public/information/key_insights.json', 'utf-8');
         const raw_time = await fs.readFile('./public/information/timeline.json', 'utf-8');
@@ -153,15 +150,87 @@ app.get('/timeline', async (req, res) => {
         timelineData = JSON.parse(raw_time);
         const timeline = timelineData.timeline;
 
+
         const colors = alternateColors(1, 2, timeline.length);
         console.log(colors)
         res.render('timeline', {keyInsights, timeline, colors});
+
     } catch(err) {
         console.log("Couldn't fetch data for insights and timeline. Error: ", err.message);
         res.status(404).send("Couldn't Load files");
     }
 
+});
 
+app.get('/infrastructure', async (req, res) => {
+    let infrastructure = null;
+    let providers = null;
+
+    try {
+        const infraRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'infrastructure_panama.json'), 'utf-8');
+        const providersRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'providers_panama.json'), 'utf-8');
+
+        infrastructure = JSON.parse(infraRaw);
+        providers = JSON.parse(providersRaw);
+
+        const timeline = infrastructure.timeline;
+        const seaCables = infrastructure.subsea_cables;
+        const ixp = infrastructure.ixp[0];
+        const publicPrograms = infrastructure.public_programs;
+        const spectrum = infrastructure.spectrum_and_5g;
+
+        const providersInfo = providers.providers;
+
+        console.log(ixp)
+
+        res.render('infrastructure', {
+            timeline,
+            seaCables,
+            ixp,
+            publicPrograms,
+            spectrum,
+            providersInfo
+        });
+
+
+    } catch (err) {
+        console.error('Failed to load infrastructure/providers data:', err.message);
+    }
+
+});
+
+app.get('/inclusion', async (req, res) => {
+  let inclusion = null;
+  try {
+    const inclusionRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'inclusion.json'), 'utf-8');
+    inclusion = JSON.parse(inclusionRaw);
+  } catch (err) {
+    console.error('Failed to load inclusion data:', err.message);
+  }
+  res.render('inclusion', { inclusion });
+});
+
+app.get('/economy', async (req, res) => {
+  let economy = null;
+  try {
+    const economyRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'economy.json'), 'utf-8');
+    economy = JSON.parse(economyRaw);
+    const sourcesRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'sources.json'), 'utf-8');
+  } catch (err) {
+    console.error('Failed to load economy data:', err.message);
+  }
+  res.render('economy', { economy });
+});
+
+app.get('/sources', async (req, res) => {
+  let sources = null;
+  try {
+    const sourcesRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'sources.json'), 'utf-8');
+    sources = JSON.parse(sourcesRaw);
+  } catch (err) {
+    console.error('Failed to load sources catalog:', err.message);
+  }
+  res.render('sources', { sources });
 });
 
 
