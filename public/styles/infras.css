@@ -1,0 +1,212 @@
+.infra__hero {
+    display: flex;
+    padding: var(--space-md);
+    align-items: center;
+}
+
+.hero-infra__img {
+    width: 40vw;
+    height: 40vh;
+    object-fit: cover;
+}
+
+@media (min-width: 40em) {
+    .hero-infra__text {
+        width: 50vw;
+    }
+
+    .hero-infra__img {
+        width: 50vw;
+        height: 40vh;
+        object-fit: cover;
+    }
+}
+
+.infra__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+}
+
+.time__year {
+    background: var(--color-blue-highlight);
+}
+
+.text__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cables h4,
+.cables p
+{
+    padding: var(--space-xs);
+    border: 1px solid var(--color-secondary);
+    border-top: none;
+}
+
+.notes h4 {
+    border-bottom: none;
+}
+
+.small-article {
+    border: 2px solid var(--color-secondary);
+    display: flex;
+    width: clamp(100%, 50vw, 700px);
+}
+
+.ixp {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.small-article img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.small-article {
+    border: 2px solid var(--color-secondary);
+    display: flex;
+    width: clamp(300px, 50vw, 700px);
+}
+
+
+@media (min-width: 52em) {
+    .ixp {
+        flex-direction: row;
+    }
+
+    .small-article img {
+        width: 300px;
+        height: auto;
+        object-fit: contain;
+        border-right: 2px solid var(--color-secondary);
+        border-bottom: none;
+    }
+}
+
+.small-article div {
+    padding: var(--space-xs);
+}
+
+h3 {
+    margin: var(--space-md) 0;
+}
+
+/* Public Programs – responsive cards */
+.articles__container.programs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    align-items: stretch;
+    justify-content: center;
+    margin-inline: auto;
+    max-width: 1200px;
+    padding-block: var(--space-md);
+}
+
+.program__card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform var(--duration-fast) ease, box-shadow var(--duration-fast) ease, border-color var(--duration-fast) ease;
+    flex: 1 1 clamp(260px, 30vw, 360px);
+    max-width: 100%;
+}
+
+
+
+.program__media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #f3f4f6;
+    display: grid;
+    place-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.program__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: var(--space-xs);
+}
+
+.program__card .text__container {
+    display: grid;
+    gap: var(--space-xs);
+    padding: clamp(var(--space-sm), 1.5vw, var(--space-lg));
+}
+
+.program__card .text__container h4 {
+    letter-spacing: var(--letter-spacing);
+    font-weight: var(--font-bold);
+}
+
+.program__card .text__container p {
+    line-height: 1.5;
+    color: var(--color-secondary);
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    width: fit-content;
+    margin-top: var(--space-xs);
+    background: #38d34c;
+    color: var(--color-primary) !important;
+}
+
+@media (max-width: 40em) {
+    .program__card { flex: 1 1 100%; }
+}
+
+.spectrum .small-article {
+    width: min(900px, 100%);
+    margin-inline: auto;
+    display: block;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: clamp(var(--space-md), 2.5vw, var(--space-xl));
+}
+
+.spectrum .small-article h3 {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-xs);
+}
+
+
+
+
+
+
+.spectrum .highlights {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-sm);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.spectrum .highlights li {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    padding: var(--space-sm) var(--space-md);
+    line-height: 1.5;
+}
