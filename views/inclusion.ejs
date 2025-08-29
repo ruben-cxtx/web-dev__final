@@ -10,7 +10,101 @@
 </head>
 <body>
   <%- include("partials/header") %>
+    <main>
+        <section class="hero-home">
+            <div class="hero-home__text">
+                <h1 class="title">Digital Inclusion & Government Initiatives</h1>
+                <p class="text">How Panama’s public sector and institutions worked to make the internet accessible and integrate digital services into governance, shifting access from urban elites to broad, inclusive usage across classes and geographies.</p>
+            </div>
+            <img src="/assets/inclusion-hero.jpg" alt="Panama Woman">
+        </section>
+    </main>
+    <section class="programs__container">
+        <% programs.forEach(program => {%>
+            <article class="program__article">
+                <div class="article__hero">
+                <img src="<%= program.img_url %>" alt="<%= program.id %> image">
+                <h3><%= program.title %></h3>
+                </div>
+                <div class="article__text">
+                    <div class="text__group">
+                    <h4>What is it?</h4>
+                    <p><%= program.summary %></p>
+                    </div>
+                    <div class="text__group">
+                        <h4>Timeline</h4>
+                        <% for (const item of (program && Array.isArray(program.timeline) ? program.timeline : [])) { %>
+                            <h5><%= item.year %></h5>
+                            <p><%= item.event %></p>
+                        <% } %>
+                    </div>
+                    <div class="text__group">
+                        <h4>Metrics</h4>
+<!--                        for (const [key, value] of Object.entries(obj)) {-->
+<!--                        console.log(key, value);-->
+<!--                        }-->
+                        <% for (const [key, value] of Object.entries(program.metrics || {})) { %>
+                            <h5>
+                                <span class="metric-key"><%= key %></span>:
+                                <span class="metric-value"><%= value %></span>
+                            </h5>
+                        <% } %>
+                    </div>
+                    <div class="text__group">
+                        <h5>Benefits</h5>
+                        <ul>
+                        <% program.benefits.forEach(benefit => {%>
+                            <li><%= benefit %></li>
+                        <%});%>
+                        </ul>
+                    </div>
+                </div>
+                <div class="article__buton">
+                    <a href="<%= program.read_more %>" target="_blank"><button class="btn-read-more">Read more</button></a>
+                </div>
+            </article>
+        <% }); %>
+    </section>
+  <section class="government__article">
+      <h2>Government Initiatives</h2>
+      <h3>Institutional milestones</h3>
+      <ul>
+      <% goverment.forEach(milestone => { %>
+          <li>
+              <h4><%=milestone.year%></h4>
+              <p><%=milestone.event%></p>
+          </li>
+      <%});%>
+      </ul>
+      <h3>Flagship Platforms</h3>
+      <ul>
+          <% platforms.forEach(platform => { %>
+          <li>
+              <img src="" alt="">
+              <h4><%= platform.name %></h4>
+              <p><%= platform.purpose %></p>
+          </li>
+          <% }); %>
 
+      </ul>
+  </section>
+  <section class="inclusion-plans">
+      <h2>Strategic Agendas and Plans</h2>
+      <ul>
+      <% plans.forEach(plan => { %>
+          <li>
+              <p><strong>Name</strong>: <%= plan.name %></p>
+              <p><strong>Years</strong>: <%= plan.years %></p>
+              <p><strong>Highlights: </strong></p>
+              <ul>
+              <% plan.highlights.forEach(h => {%>
+                  <li><%= h %></li>
+                  <%});%>
+              </ul>
+          </li>
+      <%});%>
+      </ul>
+  </section>
   <%- include("partials/footer") %>
 </body>
 </html>
