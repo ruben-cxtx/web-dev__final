@@ -201,13 +201,26 @@ app.get('/infrastructure', async (req, res) => {
 
 app.get('/inclusion', async (req, res) => {
   let inclusion = null;
+  let programs = null;
+  let goverment = null;
+  let plans = null;
+  let platforms = null;
+  let governmentPlatform = null;
+
   try {
     const inclusionRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'inclusion.json'), 'utf-8');
     inclusion = JSON.parse(inclusionRaw);
+
+    programs = inclusion.community_access_programs;
+    goverment = inclusion.e_government.institutional_milestones;
+    plans = inclusion.strategic_agendas_and_plans;
+    platforms = inclusion.e_government.flagship_platforms
+
+
   } catch (err) {
     console.error('Failed to load inclusion data:', err.message);
   }
-  res.render('inclusion', { inclusion });
+  res.render('inclusion', { programs, goverment, plans, platforms });
 });
 
 app.get('/economy', async (req, res) => {
