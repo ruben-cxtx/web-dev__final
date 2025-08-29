@@ -5,15 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Economy</title>
   <link href="/styles/styles.css" rel="stylesheet">
-  <link href="/styles/economy.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/8f4601af06.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <%- include("partials/header") %>
   <main>
     <section class="page-hero">
-      <h1>Digital Economy in Panama</h1>
-      <p>Basic content placeholder for the Economy page.</p>
+      <div class="hero">
+        <h1><%= (meta && meta.title) ? meta.title : 'Digital Economy' %></h1>
+        <p>Panama's shift to a more digital economy: payments, e-commerce and entrepreneurship.</p>
+        <p>Last updated: <%= meta && meta.last_updated ? meta.last_updated : '' %></p>
+      </div>
+      <img src="/assets/panama-flag.jpg" alt="Panama flag">
+    </section>
+
+    <section class="section">
+      <h2>Online Banking & Fintech</h2>
+      <% if (obf && (obf.highlights || obf.wallets)) { %>
+        <div class="container">
+          <article class="card">
+            <h3>Milestones</h3>
+            <ul class="list">
+              <% (obf.highlights || []).forEach(h => { %>
+                <li><strong><%= h.year %></strong> — <%= h.title %>: <%= h.text %></li>
+              <% }) %>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Wallets</h3>
+            <ul class="list">
+              <% (obf.wallets || []).forEach(w => { %>
+                <li><span class="highlight-blue"><%= w.name %></span> — <%= w.type %><% if (w.status) { %> • <%= w.status %><% } %><% if (w.users) { %> • Users: <%= w.users %><% } %><% if (w.merchants) { %> • Merchants: <%= w.merchants %><% } %></li>
+              <% }) %>
+            </ul>
+          </article>
+        </div>
+      <% } else { %>
+        <p>No fintech data available.</p>
+      <% } %>
+    </section>
+
+    <section class="section">
+      <h2>E‑commerce Growth</h2>
+      <% if (ec) { %>
+        <div class="container">
+          <div class="card">
+            <h3>Market size</h3>
+            <p><span class="highlight-blue">US$<%= (ec.market_size_usd && ec.market_size_usd["2024_estimate"]) ? ec.market_size_usd["2024_estimate"].toLocaleString() : '—' %></span></p>
+          </div>
+          <div class="card">
+            <h3>Online share</h3>
+            <p><%= ec.online_share_of_retail ? ec.online_share_of_retail["2024_range"] : '' %></p>
+          </div>
+          <div class="card">
+            <h3>COVID surge</h3>
+            <p><%= ec.covid_surge ? ec.covid_surge["2020_vs_2019"] : '' %></p>
+          </div>
+        </div>
+        <h3>Key platforms</h3>
+        <div class="container">
+          <% (ec.key_platforms || []).forEach(p => { %>
+            <div class="card">
+              <h4><%= p.name %></h4>
+              <p><%= p.status %></p>
+            </div>
+          <% }) %>
+        </div>
+      <% } %>
+    </section>
+
+    <section class="section">
+      <h2>Digital Entrepreneurship</h2>
+      <% if (de) { %>
+        <div class="container">
+          <% (de.programs || []).forEach(p => { %>
+            <article class="card">
+              <h3><span class="highlight-blue"><%= p.name %></span></h3>
+              <p><%= p.type %> — <%= p.status %></p>
+            </article>
+          <% }) %>
+        </div>
+      <% } %>
+    </section>
+
+    <section class="section">
+      <h2>Metrics</h2>
+      <% if (metrics) { %>
+        <div class="container">
+          <article class="card">
+            <h3>Verified</h3>
+            <ul class="list">
+              <% (metrics.verified || []).forEach(v => { %>
+                <li><span class="highlight-blue"><%= v.name %></span>: <%= v.value || v.value_usd || '' %></li>
+              <% }) %>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Claims (to verify)</h3>
+            <ul class="list">
+              <% (metrics.claims_or_to_verify || []).forEach(c => { %>
+                <li><span class="highlight-red"><%= c.claim %></span> — <em><%= c.status %></em></li>
+              <% }) %>
+            </ul>
+          </article>
+        </div>
+      <% } %>
     </section>
   </main>
   <%- include("partials/footer") %>

@@ -228,11 +228,26 @@ app.get('/economy', async (req, res) => {
   try {
     const economyRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'economy.json'), 'utf-8');
     economy = JSON.parse(economyRaw);
-    const sourcesRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'sources.json'), 'utf-8');
+
+    const meta = economy.meta || {};
+    const obf = economy.sections ? economy.sections.online_banking_fintech : null;
+    const ec = economy.sections ? economy.sections.ecommerce_growth : null;
+    const de = economy.sections ? economy.sections.digital_entrepreneurship : null;
+    const future = economy.sections ? economy.sections.future_trends : null;
+    const metrics = economy.metrics || null;
+
+    res.render('economy', {
+      meta,
+      obf,
+      ec,
+      de,
+      future,
+      metrics
+    });
   } catch (err) {
     console.error('Failed to load economy data:', err.message);
+    res.render('economy', { meta: {}, obf: null, ec: null, de: null, future: null, metrics: null });
   }
-  res.render('economy', { economy });
 });
 
 app.get('/sources', async (req, res) => {
