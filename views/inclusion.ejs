@@ -7,6 +7,7 @@
   <link href="/styles/styles.css" rel="stylesheet">
   <link href="/styles/inclusion.css" rel="stylesheet">
     <link href="/styles/partials.css" rel="stylesheet">
+    <link href="/styles/economy.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/8f4601af06.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -21,10 +22,11 @@
             <img src="/assets/inclusion-hero.jpg" alt="Panama Woman">
         </section>
     </main>
+    <h2>Programs</h2>
     <section class="programs__container">
-        <h2>Programs</h2>
         <% programs.forEach(program => {%>
             <article class="program__article">
+                <div class="article__data">
                 <div class="article__hero">
                 <img src="<%= program.img_url %>" alt="<%= program.id %> image">
                 <h3><%= program.title %></h3>
@@ -55,32 +57,33 @@
                     </div>
                     <div class="text__group">
                         <h5>Benefits</h5>
-                        <ul>
+                        <ul class="list">
                         <% program.benefits.forEach(benefit => {%>
                             <li><%= benefit %></li>
                         <%});%>
                         </ul>
                     </div>
                 </div>
-                <div class="article__buton">
-                    <a href="<%= program.read_more %>" target="_blank"><button class="btn-read-more">Read more</button></a>
+                </div>
+                <div class="article__btn">
+                    <a href="<%= program.read_more %>" target="_blank"><button class="btn-program"><i class="fa-solid fa-arrow-right"></i> Read more</button></a>
                 </div>
             </article>
         <% }); %>
     </section>
-  <section class="government__article">
-      <h2>Government Initiatives</h2>
+    <h2>Government Initiatives</h2>
+    <section class="government__article">
       <h3>Institutional milestones</h3>
-      <ul>
+      <ul class="timeline">
       <% goverment.forEach(milestone => { %>
-          <li>
+          <li class="list">
               <h4><%=milestone.year%></h4>
               <p><%=milestone.event%></p>
           </li>
       <%});%>
       </ul>
       <h3>Flagship Platforms</h3>
-      <ul>
+      <ul class="info-card__list">
           <% platforms.forEach(platform => { %>
           <li>
               <img src="" alt="">
@@ -91,9 +94,9 @@
 
       </ul>
   </section>
-  <section class="inclusion-plans">
-      <h2>Strategic Agendas and Plans</h2>
-      <ul>
+  <h2>Strategic Agendas and Plans</h2>
+  <section>
+      <ul  class="inclusion-plans">
       <% plans.forEach(plan => { %>
           <li>
               <p><strong>Name</strong>: <%= plan.name %></p>

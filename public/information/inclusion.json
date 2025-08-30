@@ -71,18 +71,22 @@
     ],
     "flagship_platforms": [
       {
+        "img_url":"",
         "name": "Panamá en Línea (Trámites en línea)",
         "purpose": "Single window for online procedures and payments; supports interoperability and digital signatures."
       },
       {
+        "img_url":"",
         "name": "Centro de Atención Ciudadana 311",
         "purpose": "Omnichannel citizen service desk assisting with government services and online procedures."
       },
       {
+        "img_url":"",
         "name": "Datos Abiertos",
         "purpose": "Open data portal for government datasets (e.g., RNI usage)."
       },
       {
+        "img_url":"",
         "name": "Municipios Digitales",
         "purpose": "Local government digital services and modernization initiatives coordinated by AIG."
       }

@@ -253,7 +253,7 @@ app.get('/economy', async (req, res) => {
 app.get('/sources', async (req, res) => {
   let sources = null;
   try {
-    const sourcesRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'sources.json'), 'utf-8');
+    const sourcesRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'combined_sources_v2.json'), 'utf-8');
     sources = JSON.parse(sourcesRaw);
   } catch (err) {
     console.error('Failed to load sources catalog:', err.message);

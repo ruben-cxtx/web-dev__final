@@ -177,7 +177,8 @@ textarea {
 .btn-submit {
     align-self: flex-start;
     cursor: pointer;
-    border: 0;
+    border: 1px solid var(--bg-drk);
+    color: var(--bg-drk) !important;
     border-radius: var(--radius-md);
     padding: calc(var(--space-xs) + 2px) var(--space-md);
     background: linear-gradient(180deg, var(--bg-drk), color-mix(in srgb, var(--color-secondary) 85%, black));
@@ -186,7 +187,7 @@ textarea {
     letter-spacing: 0.2px;
     width: auto;
     min-width: 11rem;
-    transition: transform 140ms ease, box-shadow 140ms ease, filter 140ms ease;
+    transition: all 140ms ease;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
@@ -194,6 +195,9 @@ textarea {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
     filter: brightness(1.02);
+    border: 1px solid var(--primary-ink);
+    color: var(--primary-ink) !important;
+    background: var(--bg-drk);
 }
 
 .btn-submit:active {

@@ -13,8 +13,35 @@
   <main>
     <section class="page-hero">
       <h1>Sources</h1>
-      <p>Basic content placeholder for the Sources page.</p>
     </section>
+          <section class="table__sources">
+          <table class="url-list">
+        <caption class="visually-hidden">Sources used in the project</caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Used in</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (sources && sources.length) { %>
+            <% sources.forEach((source) => { %>
+              <tr>
+                <td><%= source.name %></td>
+                <td><%= source.page %></td>
+                <td>
+                  <a href="<%= source.url %>" target="_blank" >link</a>
+                </td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr>
+              <td colspan="3">No sources yet.</td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
   </main>
   <%- include("partials/footer") %>
 </body>

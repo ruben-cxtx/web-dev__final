@@ -59,5 +59,131 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding: var(--space-md);
+    gap: var(--space-md);
+}
+
+@media (min-width: 40em) {
+    .programs__container {
+        flex-direction: row;
+    }
+}
+
+
+.program__article {
+    border: 2px solid var(--bg-drk);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    overflow: hidden;
+    width: clamp(300px, 50vw, 700px);
+    height: fit-content;
+}
+
+.article__data {
+    padding: var(--space-md);
+}
+
+.article__hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-md);
+}
+
+.article__hero img {
+    border-radius: 20px 20px 0 0;
+}
+
+.article__btn {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-program {
+    width: 100%;
+    height: 4em;
+    text-align: start;
+    padding-left: 2em;
+    color: var(--primary-ink);
+    font-weight: 600;
+    background: var(--primary);
+    border: 2px solid var(--bg-drk);
+    transition: background var(--duration-medium) ease;
+}
+
+.btn-program:hover {
+    background: var(--secondary);
+}
+
+.list {
+    list-style: none;
+    margin: var(--space-md) 0;
+    width: clamp(250px, 25vw, 300px);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.timeline li {
+    border: 1px solid var(--bg-drk);
+}
+
+@media (min-width: 40em) {
+.timeline {
+    flex-direction: row;
+}
+}
+
+h2 {
+    margin: 0.8em;
+}
+
+.government__article {
+    padding: var(--space-md);
+}
+
+.government__article h3 {
+    text-align: center;
+}
+
+
+.list h4 {
+    text-align: center;
+    background-color: var(--primary-hgl);
+    padding: var(--space-md);
+}
+
+.list p {
+    padding: var(--space-sm);
+}
+
+
+.inclusion-plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: var(--space-md);
+}
+
+.inclusion-plans li {
+    list-style: none;
+    padding: var(--space-md);
+    background: #ededed;
+    flex: 1;
+}
+
+@media (min-width: 40em) {
+    .inclusion-plans {
+    flex-direction: row;
+}
 }
