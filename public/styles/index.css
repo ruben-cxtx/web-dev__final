@@ -18,18 +18,6 @@
     padding: var(--space-xl) var(--space-sm);
 }
 
-.title {
-    font-size: var(--font-size-title);
-    font-weight: var(--font-bold);
-    letter-spacing: var(--letter-spacing);
-    margin-bottom: 0.5em;
-}
-
-.text {
-    line-height: 1.5em;
-    padding-right: 1em;
-    font-size: var(--font-size-text);
-}
 
 .hero-home img {
     width: 100%;
@@ -74,10 +62,7 @@
 }
 
 
-.small-title {
-    letter-spacing: var(--letter-spacing);
-    font-weight: var(--font-bold);
-}
+
 
 .about__container__text p {
     font-style: italic;
@@ -118,8 +103,8 @@
 
 .x-small-text {
     font-size: clamp(0.8rem, 1.4vw, 0.95rem);
-    color: var(--color-button-not-active);
-    letter-spacing: var(--letter-spacing);
+    color: var(--muted);
+    letter-spacing: var(--ls-normal);
     border-top: 1px solid black;
     padding-top: 1em;
 }
@@ -154,8 +139,7 @@
 }
 
 label {
-    font-size: var(--font-size-text);
-    color: var(--color-secondary);
+    color: var(--bg-drk);
 }
 
 
@@ -166,8 +150,8 @@ textarea {
     border: 1px solid #e6e6e6;
     border-radius: var(--radius-sm);
     background: #fff;
-    color: var(--color-secondary);
-    font: var(--font-normal) var(--font-size-text)/var(--line-height-text) "Inter Tight", sans-serif;
+    color: var(--bg-drk);
+    font: 300 var(--fs-text)/var(--lh-text) "Inter Tight", sans-serif;
     transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
 }
 
@@ -179,7 +163,7 @@ textarea::placeholder {
 input[type="text"]:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--color-secondary);
+    border-color: var(--bg-drk);
     box-shadow: 0 0 0 3px rgba(0,0,0,0.06);
     background-color: #fff;
 }
@@ -196,8 +180,8 @@ textarea {
     border: 0;
     border-radius: var(--radius-md);
     padding: calc(var(--space-xs) + 2px) var(--space-md);
-    background: linear-gradient(180deg, var(--color-secondary), color-mix(in srgb, var(--color-secondary) 85%, black));
-    color: var(--color-primary);
+    background: linear-gradient(180deg, var(--bg-drk), color-mix(in srgb, var(--color-secondary) 85%, black));
+    color: var(--primary-ink);
     font-weight: 600;
     letter-spacing: 0.2px;
     width: auto;

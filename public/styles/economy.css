@@ -1,0 +1,211 @@
+@media ( min-width: 48em ) {
+    .hero__container { background-image: url("/assets/panama-flag.jpg"); }
+
+    .hero__container-text {
+        color: var(--primary-ink);
+        text-align: right;
+    }
+}
+
+h2 {
+    margin-left: var(--space-md);
+}
+
+.info-card {
+    grid-column: span 6;
+}
+
+
+
+.card-media {
+    aspect-ratio: 16 / 9;
+    border-radius: inherit;
+    overflow: hidden;
+    background: #f3f3f3;
+    margin-bottom: var(--space-sm);
+}
+
+.card-media > img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/*-------- HERO SECTION --------*/
+
+
+.hero__container {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media ( min-width: 48em ) {
+    .hero__container {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 30vh;
+        display: flex;
+        align-items: end;
+    }
+
+    .hero__container img {
+        display: none !important;
+    }
+
+    .hero__container p {
+        width: 50vw;
+    }
+
+    .hero__container-text {
+        z-index: 1;
+    }
+
+    .bg-dim {
+        position: relative;
+        isolation: isolate;
+        --dim: .5;
+    }
+    .bg-dim::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,var(--dim));
+        z-index: -1;
+        pointer-events: none;
+    }
+
+}
+
+
+.info__container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bg-blue {background: var(--primary); }
+.bg-red {background: var(--secondary); }
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.info-card {
+    height: fit-content;
+    flex: 1;
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+
+.section {
+    display: block;
+}
+
+.info-card__list li {
+    list-style: none;
+    width: clamp(300px, 25vw, 400px);
+    margin-bottom: var(--space-sm);
+    background: #fafafa;
+    padding: var(--space-md);
+    border-radius: 12px;
+}
+
+.info-card__list {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 40em) {
+    .info-card__list {
+        flex-direction: row;
+    }
+}
+
+
+
+@media (min-width: 40em) {
+.metrics {
+    display: flex;
+    flex-direction: row;
+}
+}
+
+.metrics li {
+    list-style: none;
+}
+
+section {
+    padding: var(--space-sm);
+}
+
+img {
+    object-fit: fill;
+}
+
+.wallet {
+    border: 1px solid var(--primary);
+}
+
+.growth p{
+    color: #a9e74c;
+}
+
+.growth i {
+    color: var(--bg-drk);
+}
+
+.info-w-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: var(--space-md);
+    padding: 0;
+    border-radius: 12px 12px 0 0 ;
+}
+
+#info-img {
+    padding: 0;
+}
+
+.info-text {
+    padding: var(--space-md);
+    text-align: center;
+}
+
+#type {
+    padding: var(--space-xs) var(--space-md);
+    background: #e0e0e0;
+    width: fit-content;
+    border-radius: 20px;
+}
+
+#status {
+    color: var(--primary);
+}
+
+.digital-en {
+    justify-content: space-evenly;
+}
+
+#future {
+    border: 3px dotted #a9e74c;
+    background-color: var(--surface);
+}
