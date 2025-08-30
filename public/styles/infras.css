@@ -30,7 +30,7 @@
 }
 
 .time__year {
-    background: var(--color-blue-highlight);
+    background: var(--primary-hgl);
 }
 
 .text__container {
@@ -42,7 +42,7 @@
 .cables p
 {
     padding: var(--space-xs);
-    border: 1px solid var(--color-secondary);
+    border: 1px solid var(--bg-drk);
     border-top: none;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .small-article {
-    border: 2px solid var(--color-secondary);
+    border: 2px solid var(--bg-drk);
     display: flex;
     width: clamp(100%, 50vw, 700px);
 }
@@ -67,11 +67,11 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-bottom: 2px solid var(--color-secondary);
+    border-bottom: 2px solid var(--bg-drk);
 }
 
 .small-article {
-    border: 2px solid var(--color-secondary);
+    border: 2px solid var(--bg-drk);
     display: flex;
     width: clamp(300px, 50vw, 700px);
 }
@@ -86,7 +86,7 @@
         width: 300px;
         height: auto;
         object-fit: contain;
-        border-right: 2px solid var(--color-secondary);
+        border-right: 2px solid var(--bg-drk);
         border-bottom: none;
     }
 }
@@ -148,15 +148,9 @@ h3 {
     padding: clamp(var(--space-sm), 1.5vw, var(--space-lg));
 }
 
-.program__card .text__container h4 {
-    letter-spacing: var(--letter-spacing);
-    font-weight: var(--font-bold);
-}
 
-.program__card .text__container p {
-    line-height: 1.5;
-    color: var(--color-secondary);
-}
+
+
 
 .badge {
     display: inline-block;
@@ -166,7 +160,7 @@ h3 {
     width: fit-content;
     margin-top: var(--space-xs);
     background: #38d34c;
-    color: var(--color-primary) !important;
+    color: var(--primary-ink) !important;
 }
 
 @media (max-width: 40em) {

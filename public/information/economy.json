@@ -13,32 +13,31 @@
         {
           "year": "2000",
           "title": "First local online banking launches",
-          "text": "Banco General states it was the first Panamanian bank to offer online banking (circa 2000).",
-          "source_ids": ["bgeneral_first_online_banking", "bgeneral_ig_2000"]
+          "text": "Banco General states it was the first Panamanian bank to offer online banking (circa 2000)."
         },
         {
           "year": "2019–2025",
           "title": "Bank-led wallets & instant transfers expand",
-          "text": "Yappy (Banco General) becomes the leading P2P and merchant wallet; ACH Xpress broadens instant bank transfers.",
-          "source_ids": ["yappy_merchants", "bgeneral_financials_2024", "achxpress_ig"]
+          "text": "Yappy (Banco General) becomes the leading P2P and merchant wallet; ACH Xpress broadens instant bank transfers."
         },
         {
           "year": "2024",
           "title": "Nequi exits Panama",
-          "text": "Nequi ceases operations in Panama on Dec 31, 2024; users migrate to Banistmo channels.",
-          "source_ids": ["nequi_exit_pa", "nequi_exit_media"]
+          "text": "Nequi ceases operations in Panama on Dec 31, 2024; users migrate to Banistmo channels."
         }
       ],
       "wallets": [
         {
+          "img_url": "https://www.yappy.com.pa/wp-content/uploads/2021/06/yappy-landscape.png",
           "name": "Yappy",
           "type": "bank-led wallet",
+          "status": "Active",
           "users": "1.4M+ (Jan 2025, media report)",
           "merchants": "28,000+",
-          "notes": "Moved US$9.5B in 2023 through Banco General’s digital channels; 68% of BG transactions were digital (2024).",
-          "source_ids": ["yappy_users_2025", "yappy_merchants", "bgeneral_ina_2024", "bgeneral_financials_2024"]
+          "notes": "Moved US$9.5B in 2023 through Banco General’s digital channels; 68% of BG transactions were digital (2024)."
         },
         {
+          "img_url": "https://images.seeklogo.com/logo-png/37/1/nequi-logo-png_seeklogo-377455.png",
           "name": "Nequi (Panamá)",
           "type": "neobank wallet (Banistmo product)",
           "status": "Exited Dec 31, 2024",
@@ -46,6 +45,7 @@
           "source_ids": ["nequi_exit_pa"]
         },
         {
+          "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.ecotvpanama.com%2Fp%2Fc74acdd3ed76e2bc57c3c47f2deb42f9%2Fadjuntos%2F323%2Fimagenes%2F018%2F381%2F0018381151%2F1200x675%2Fsmart%2Flisto-wallet-agost-2023png.png&f=1&nofb=1&ipt=11d04dc17dd974fe5f77556de09c3b85477b6c9ee041519605aff6074262f33c",
           "name": "Listo Wallet (gov benefits)",
           "type": "government wallet / benefits disbursement",
           "status": "Active",
@@ -71,21 +71,25 @@
       },
       "key_platforms": [
         {
+          "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodix.com%2Flogo%2F1653978.png&f=1&nofb=1&ipt=ef00dd08ce6e68dd744a0339387e1030e1c2605a10ec78e9a3b8ebe98e95ec05",
           "name": "Mercado Libre",
           "status": "Regional marketplace used by Panamanians (no dedicated .pa domain).",
           "source_ids": ["trade_ict_2023"]
         },
         {
+          "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.AekXaPpuq1BgY05q29zKHwAAAA%3Fpid%3DApi&f=1&ipt=2a09656a41e8f21a1aca33943639b7e38f79ad4531206213e7f62d152cbf4a0c",
           "name": "Linio",
           "status": "Closed Panama operations in 2019.",
           "source_ids": ["linio_closure_pdf", "linio_closure_press"]
         },
         {
+          "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogos-marcas.com%2Fwp-content%2Fuploads%2F2022%2F03%2FOLX-Emblema.jpg&f=1&nofb=1&ipt=680cd898f648267ee612b07b5ecc98175568b9a6008e8a510ab6ab870b126ca3",
           "name": "OLX",
           "status": "Merged operations into Encuentra24 in 2020.",
           "source_ids": ["olx_encuentra24_blog", "olx_encuentra24_prn"]
         },
         {
+          "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffrontierdv.com%2Fwp-content%2Fuploads%2F2017%2F03%2Fencuentra24news.png&f=1&nofb=1&ipt=8845ac2f688bf7d7eb5daa5ccba04141e549118961b32c2100328eddf791026d",
           "name": "Encuentra24",
           "status": "Active classifieds & marketplace; acquired OLX ops in CA.",
           "source_ids": ["olx_encuentra24_prn", "encuentra24_site", "encuentra24_wiki"]
@@ -96,18 +100,21 @@
     "digital_entrepreneurship": {
       "programs": [
         {
+          "img_url":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.oteima.ac.pa%2Fwp-content%2Fgallery%2Fsenacyt-ronda-ii%2F454430674_18450637237023052_3260622092130819928_n.jpg&f=1&nofb=1&ipt=58c5f4131b2446986ce4c0c64edbd489c4892ef1c46e19f37addea0922af0a1a",
           "name": "SENACYT – Convocatoria para Emprendimientos Innovadores 2024",
           "type": "public grants / seed",
           "status": "Closed rounds in 2024; recurring program",
           "source_ids": ["senacyt_conv_2024_apr", "senacyt_conv_2024_jul", "senacyt_fondos_page"]
         },
         {
+          "img_url":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Felcapitalfinanciero.com%2Fwp-content%2Fuploads%2F2023%2F10%2FFectivo-premiaci%25C3%25B3n.jpeg&f=1&nofb=1&ipt=76bdf740ce1c4842c0c5a938f4b815fb7148ca19fa2fc243b45a156812370823",
           "name": "PanamaStartups",
           "type": "community / network",
           "status": "Active",
           "source_ids": ["panamastartups_site"]
         },
         {
+          "img_url":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.ZKh3nm3SNnCjBLZltxwNEAHaEB%3Fpid%3DApi&f=1&ipt=cadac73c1d21dfa59610e6490727fde703bea72fd3648a986532796934ced37f",
           "name": "Startup Weekend Panamá",
           "type": "events",
           "status": "Recurring global program with local editions",

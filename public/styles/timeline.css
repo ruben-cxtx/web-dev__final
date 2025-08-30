@@ -34,7 +34,7 @@
 
     .hero-timeline__text h1,
     .hero-timeline__text p {
-        color: var(--color-primary);
+        color: var(--primary-ink);
     }
 }
 
@@ -78,7 +78,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
-    border: 2px solid var(--color-secondary);
+    border: 2px solid var(--bg-drk);
     border-radius: 0 0 12px 12px;
 }
 
@@ -86,16 +86,16 @@
     text-align: center;
     height: 50px;
     align-content: center;
-    color: var(--color-primary);
-    border-bottom: 2px solid var(--color-secondary);
+    color: var(--primary-ink);
+    border-bottom: 2px solid var(--bg-drk);
 }
 
 #blue {
-    background: var(--color-blue-highlight);
+    background: var(--primary-hgl);
 }
 
 #red {
-    background: var(--color-red-highlight);
+    background: var(--secondary-hgl);
 }
 
 

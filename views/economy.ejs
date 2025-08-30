@@ -5,37 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Economy</title>
   <link href="/styles/styles.css" rel="stylesheet">
+  <link href="/styles/partials.css" rel="stylesheet">
+  <link href="/styles/economy.css" rel="stylesheet">
+
   <script src="https://kit.fontawesome.com/8f4601af06.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <%- include("partials/header") %>
   <main>
-    <section class="page-hero">
-      <div class="hero">
-        <h1><%= (meta && meta.title) ? meta.title : 'Digital Economy' %></h1>
-        <p>Panama's shift to a more digital economy: payments, e-commerce and entrepreneurship.</p>
-        <p>Last updated: <%= meta && meta.last_updated ? meta.last_updated : '' %></p>
+    <section class="hero__container bg-dim">
+      <div class="hero__container-text">
+        <h1 class="title">Digital Economy</h1>
+        <p class="text">See how e-commerce, fintech, and digital entrepreneurship reshaped Panama’s economy. Includes fintech apps, Startup Panama, and growth trends from 2018 to 2025 and beyond.</p>
       </div>
       <img src="/assets/panama-flag.jpg" alt="Panama flag">
     </section>
 
-    <section class="section">
-      <h2>Online Banking & Fintech</h2>
-      <% if (obf && (obf.highlights || obf.wallets)) { %>
-        <div class="container">
-          <article class="card">
-            <h3>Milestones</h3>
-            <ul class="list">
-              <% (obf.highlights || []).forEach(h => { %>
-                <li><strong><%= h.year %></strong> — <%= h.title %>: <%= h.text %></li>
-              <% }) %>
+    <section>
+      <h2 class="subtitle">Online Banking & Fintech <i class="fa-solid fa-piggy-bank"></i></h2>
+        <div class="info__container">
+      <% if (fintech) { %>
+          <article class="info-card">
+            <h3 class="small-title">Milestones <i class="fa-solid fa-landmark-flag"></i></h3>
+            <ul class="info-card__list">
+              <% fintech.highlights.forEach(h => { %>
+                <li>
+                    <h3 class="highlight-blue"><%= h.year %></h3>
+                          <h4><%= h.title %></h4>
+                    <p class="text"><%= h.text %></p>
+                </li>
+              <% }); %>
             </ul>
           </article>
-          <article class="card">
-            <h3>Wallets</h3>
-            <ul class="list">
-              <% (obf.wallets || []).forEach(w => { %>
-                <li><span class="highlight-blue"><%= w.name %></span> — <%= w.type %><% if (w.status) { %> • <%= w.status %><% } %><% if (w.users) { %> • Users: <%= w.users %><% } %><% if (w.merchants) { %> • Merchants: <%= w.merchants %><% } %></li>
+          <article class="info-card">
+            <h3 class="small-title">Wallets <i class="fa-solid fa-wallet"></i></h3>
+            <ul class="info-card__list">
+              <% fintech.wallets.forEach(w => { %>
+                <li class="wallet">
+                    <figure class="card-media">
+                        <img src="<%= w.img_url %>" alt="<%= w.name %> logo">
+                    </figure>
+
+                    <h4><%= w.name %></h4>
+                    <h5><%= w.type %></h5>
+                    <% if (w.status) { %>
+                    <h5>Status</h5>
+                        <p><%= w.status %></p>
+                    <% } %>
+                    <% if (w.users) { %>
+                        <h5>Users</h5>
+                        <p><%= w.users %></p>
+                    <% } %>
+                    <% if (w.merchants) { %>
+                        <h5>Merchants</h5>
+                        <p><%= w.merchants %></p>
+                    <% } %>
+                </li>
               <% }) %>
             </ul>
           </article>
@@ -46,68 +71,105 @@
     </section>
 
     <section class="section">
-      <h2>E‑commerce Growth</h2>
-      <% if (ec) { %>
-        <div class="container">
-          <div class="card">
-            <h3>Market size</h3>
-            <p><span class="highlight-blue">US$<%= (ec.market_size_usd && ec.market_size_usd["2024_estimate"]) ? ec.market_size_usd["2024_estimate"].toLocaleString() : '—' %></span></p>
-          </div>
-          <div class="card">
-            <h3>Online share</h3>
-            <p><%= ec.online_share_of_retail ? ec.online_share_of_retail["2024_range"] : '' %></p>
-          </div>
-          <div class="card">
-            <h3>COVID surge</h3>
-            <p><%= ec.covid_surge ? ec.covid_surge["2020_vs_2019"] : '' %></p>
-          </div>
-        </div>
-        <h3>Key platforms</h3>
-        <div class="container">
-          <% (ec.key_platforms || []).forEach(p => { %>
-            <div class="card">
-              <h4><%= p.name %></h4>
-              <p><%= p.status %></p>
+      <h2 class="subtitle">E‑commerce Growth <i class="fa-solid fa-arrow-up-right-dots"></i></h2>
+      <% if (ecommerce) { %>
+        <div class="info__container">
+
+          <div class="info-card growth">
+            <h3 class="small-title">Market size</h3>
+            <p class="text"><i class="fa-solid fa-arrow-up-right-dots"></i> US$<%= ecommerce.market_size_usd["2024_estimate"].toLocaleString() %></p>
+
+
+            <h3 class="small-title">Online share</h3>
+              <p class="text"><i class="fa-solid fa-arrow-up-right-dots"></i> <%= ecommerce.online_share_of_retail["2024_range"] %></p>
+
+
+
+            <h3 class="small-title">COVID surge</h3>
+              <p class="text"><i class="fa-solid fa-arrow-up-right-dots"></i> <%= ecommerce.covid_surge["2020_vs_2019"] %></p>
             </div>
+        </div>
+        <h3 class="small-title">Key platforms <i class="fa-brands fa-app-store-ios"></i></h3>
+        <div class="info__container">
+            <ul class="info-card__list">
+          <% ecommerce.key_platforms.forEach(p => { %>
+            <li id="info-img"><div class="info-card info-w-img">
+                    <figure class="card-media">
+                        <img src="<%= p.img_url %>" alt="<%= p.name %> logo">
+                    </figure>
+              <h3><%= p.name %></h3>
+              <p class="info-text"><%= p.status %></p>
+            </div></li>
           <% }) %>
+            </ul>
+        </div>
+      <% } %>
+    </section>
+
+    <section>
+      <h2 class="subtitle">Digital Entrepreneurship <i class="fa-solid fa-tachograph-digital"></i></h2>
+      <% if (entrepreneurship) { %>
+        <div class="info__container">
+          <ul class="info-card__list digital-en">
+          <% entrepreneurship.programs.forEach(p => { %>
+            <li>
+              <article class="info-card">
+                <figure class="card-media">
+                <img src="<%=p.img_url%>" alt="<%=p.name%> image">
+              </figure>
+              <h3><%= p.name %></h3>
+              <p id="type"><%= p.type %> </p>
+                 <p id="status"><em><%= p.status %></em></p>
+            </article></li>
+          <% }) %>
+          </ul>
         </div>
       <% } %>
     </section>
 
     <section class="section">
-      <h2>Digital Entrepreneurship</h2>
-      <% if (de) { %>
-        <div class="container">
-          <% (de.programs || []).forEach(p => { %>
-            <article class="card">
-              <h3><span class="highlight-blue"><%= p.name %></span></h3>
-              <p><%= p.type %> — <%= p.status %></p>
-            </article>
-          <% }) %>
-        </div>
-      <% } %>
-    </section>
-
-    <section class="section">
-      <h2>Metrics</h2>
+      <h2>Metrics <i class="fa-solid fa-table"></i></h2>
       <% if (metrics) { %>
-        <div class="container">
-          <article class="card">
-            <h3>Verified</h3>
-            <ul class="list">
-              <% (metrics.verified || []).forEach(v => { %>
-                <li><span class="highlight-blue"><%= v.name %></span>: <%= v.value || v.value_usd || '' %></li>
+        <div class="info__container metrics">
+          <article class="info-card">
+            <h3 >Verified <i class="fa-solid fa-check-double"></i></h3>
+            <ul>
+              <% metrics.verified.forEach(v => { %>
+                <li>
+                  <h4><%= v.name %></h4>
+                  <p><%= v.value %></p>
+                 <p><%= v.value_usd %></p>
+              </li>
               <% }) %>
             </ul>
           </article>
-          <article class="card">
-            <h3>Claims (to verify)</h3>
-            <ul class="list">
-              <% (metrics.claims_or_to_verify || []).forEach(c => { %>
-                <li><span class="highlight-red"><%= c.claim %></span> — <em><%= c.status %></em></li>
+          <article class="info-card">
+            <h3 >Claims (to verify) <i class="fa-solid fa-clock-rotate-left"></i></h3>
+            <ul>
+              <% metrics.claims_or_to_verify.forEach(c => { %>
+                <li>
+                  <p><%= c.claim %></p>
+                  <p><span class="highlight-red"><em><%= c.status %></em></span></p>
+                </li>
               <% }) %>
             </ul>
           </article>
+        </div>
+      <% } %>
+    </section>
+
+    <section class="section">
+      <h2 >Future Trends <i class="fa-solid fa-arrow-trend-up"></i></h2>
+      <% if (futureTrends) { %>
+        <div class="info__container">
+          <ul class="info-card__list">
+          <% futureTrends.items.forEach(it => { %>
+            <li id="future"><article class="info-card">
+              <h3 class="small-title"><%= it.topic %></h3>
+              <p class="text"><%= it.notes %></p>
+            </article></li>
+          <% }) %>
+          </ul>
         </div>
       <% } %>
     </section>
