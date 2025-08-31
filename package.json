@@ -4,7 +4,9 @@
   "description": "Final project of web development course, I'll be using HTML, CSS, JS, Node, Express, API's and some other cool stuff",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon --ignore public/information/stories.json server.js"
+    "dev": "nodemon --ignore public/information/stories.json server.js",
+    "lint:css": "stylelint \"public/styles/**/*.css\"",
+    "lint:css:fix": "stylelint --fix \"public/styles/**/*.css\""
   },
   "repository": {
     "type": "git",
@@ -14,6 +16,10 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "devDependencies": {
+    "stylelint": "^16.8.1",
+    "stylelint-config-standard": "^36.0.1"
+  },
   "bugs": {
     "url": "https://github.com/ruben-cxtx/web-dev__final/issues"
   },
@@ -25,10 +31,7 @@
     "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "express-rate-limit": "^8.0.1",
-    "helmet": "^8.1.0",
     "nodemon": "^3.1.10",
-    "sillyname": "^0.1.0",
-    "uuid": "^11.1.0"
+    "sillyname": "^0.1.0"
   }
 }

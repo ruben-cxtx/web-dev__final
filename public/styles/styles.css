@@ -60,6 +60,74 @@ img {
     display: block;
 }
 
+/* Skip link (visible on focus) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus,
+.skip-link:active {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-drk);
+    color: var(--primary-ink);
+    z-index: 10000;
+    border-radius: 0 0 var(--radius-sm) 0;
+}
+
+/* Shared layout utilities */
+.cards__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+/* Shared hero utilities */
+.hero__container {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 48em) {
+    .hero__container {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 30vh;
+        display: flex;
+        align-items: end;
+    }
+
+    .hero__container img { display: none !important; }
+    .hero__container p { width: 50vw; }
+    .hero__container-text { z-index: 1; }
+}
+
+.bg-dim { position: relative; isolation: isolate; --dim: .5; }
+.bg-dim::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,var(--dim));
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Shared info list utility */
+.info-card__list { display: flex; gap: var(--space-sm); justify-content: space-between; flex-direction: column; align-items: center; }
+.info-card__list li { list-style: none; width: clamp(300px, 25vw, 400px); margin-bottom: var(--space-sm); background: #fafafa; padding: var(--space-md); border-radius: 12px; }
+@media (min-width: 40em) { .info-card__list { flex-direction: row; } }
+
 html {
     font-family: "Inter Tight", system-ui, sans-serif;
     font-size: 16px;
@@ -83,11 +151,6 @@ h5{font-size:var(--fs-5)}
 p { font-size: var(--fs-text);
     line-height: var(--lh-text);
     margin: 0 0 var(--space-sm);
-}
-img {
-    max-width:100%;
-    height:auto;
-    display:block;
 }
 
 
@@ -134,12 +197,10 @@ nav a {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: clamp(0.7em, 0.5vw, 1.5em);
     flex-wrap: wrap;
 }
-
-
-.nav__links-icons { align-items: center; }
 .nav__links-icons > li { display: flex; }
 .nav__links-icons a {
   display: inline-flex;
@@ -374,5 +435,79 @@ footer {
 .btn-read-more i { line-height: 1; }
 .btn-read-more i[aria-hidden="true"] { pointer-events: none; }
 
+/* ---- shared multi-page styles ---- */
 
+/* Shared responsive layout for cards container */
+@media (min-width: 40em) {
+  .cards__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+    justify-content: start;
+    place-content: center;
+  }
+}
 
+/* Shared article grid styles */
+.articles__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 400px));
+  gap: var(--space-lg);
+  justify-content: center;
+  align-items: stretch;
+  margin-top: var(--space-md);
+}
+
+.article__card {
+  border-radius: 20px;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.article__card img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+/* Shared media container for cards */
+.card-media {
+  aspect-ratio: 16 / 9;
+  border-radius: inherit;
+  overflow: hidden;
+  background: #f3f3f3;
+  margin-bottom: var(--space-sm);
+}
+.card-media > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Shared timeline card styles */
+.time__card {
+  width: clamp(250px, 60vw, 400px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  border: 2px solid var(--bg-drk);
+  border-radius: 0 0 12px 12px;
+}
+
+.time__year {
+  text-align: center;
+  height: 50px;
+  align-content: center;
+  color: var(--primary-ink);
+  border-bottom: 2px solid var(--bg-drk);
+}
+
+.time__text {
+  padding: var(--space-sm);
+}
+.time__text p {
+  margin-top: var(--space-xs);
+}

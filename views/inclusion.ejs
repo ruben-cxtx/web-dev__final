@@ -6,13 +6,11 @@
   <title>Inclusion</title>
   <link href="/styles/styles.css" rel="stylesheet">
   <link href="/styles/inclusion.css" rel="stylesheet">
-    <link href="/styles/partials.css" rel="stylesheet">
-    <link href="/styles/economy.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/8f4601af06.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <%- include("partials/header") %>
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="hero__container bg-dim">
             <div class="hero__container-text">
                 <h1>Digital Inclusion</h1>
@@ -45,9 +43,6 @@
                     </div>
                     <div class="text__group">
                         <h4>Metrics</h4>
-<!--                        for (const [key, value] of Object.entries(obj)) {-->
-<!--                        console.log(key, value);-->
-<!--                        }-->
                         <% for (const [key, value] of Object.entries(program.metrics || {})) { %>
                             <h5>
                                 <span class="metric-key"><%= key %></span>:
@@ -66,7 +61,7 @@
                 </div>
                 </div>
                 <div class="article__btn">
-                    <a href="<%= program.read_more %>" target="_blank"><button class="btn-program"><i class="fa-solid fa-arrow-right"></i> Read more</button></a>
+                    <a href="<%= program.read_more %>" target="_blank" rel="noopener noreferrer" aria-label="Read more about <%= program.title %>"><button type="button" class="btn-program"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i> Read more</button></a>
                 </div>
             </article>
         <% }); %>
@@ -86,7 +81,7 @@
       <ul class="info-card__list">
           <% platforms.forEach(platform => { %>
           <li>
-              <img src="" alt="">
+              <img src="" alt="" aria-hidden="true">
               <h4><%= platform.name %></h4>
               <p><%= platform.purpose %></p>
           </li>

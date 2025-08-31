@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Economy</title>
   <link href="/styles/styles.css" rel="stylesheet">
-  <link href="/styles/partials.css" rel="stylesheet">
   <link href="/styles/economy.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/8f4601af06.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <%- include("partials/header") %>
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="hero__container bg-dim">
       <div class="hero__container-text">
         <h1 class="title">Digital Economy</h1>
@@ -21,11 +20,11 @@
     </section>
 
     <section>
-      <h2 class="subtitle">Online Banking & Fintech <i class="fa-solid fa-piggy-bank"></i></h2>
+      <h2 class="subtitle">Online Banking & Fintech <i class="fa-solid fa-piggy-bank" aria-hidden="true"></i></h2>
         <div class="info__container">
       <% if (fintech) { %>
           <article class="info-card">
-            <h3 class="small-title">Milestones <i class="fa-solid fa-landmark-flag"></i></h3>
+            <h3 class="small-title">Milestones <i class="fa-solid fa-landmark-flag" aria-hidden="true"></i></h3>
             <ul class="info-card__list">
               <% fintech.highlights.forEach(h => { %>
                 <li>
@@ -37,7 +36,7 @@
             </ul>
           </article>
           <article class="info-card">
-            <h3 class="small-title">Wallets <i class="fa-solid fa-wallet"></i></h3>
+            <h3 class="small-title">Wallets <i class="fa-solid fa-wallet" aria-hidden="true"></i></h3>
             <ul class="info-card__list">
               <% fintech.wallets.forEach(w => { %>
                 <li class="wallet">
@@ -70,7 +69,7 @@
     </section>
 
     <section class="section">
-      <h2 class="subtitle">E‑commerce Growth <i class="fa-solid fa-arrow-up-right-dots"></i></h2>
+      <h2 class="subtitle">E‑commerce Growth <i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i></h2>
       <% if (ecommerce) { %>
         <div class="info__container">
 
@@ -88,7 +87,7 @@
               <p class="text"><i class="fa-solid fa-arrow-up-right-dots"></i> <%= ecommerce.covid_surge["2020_vs_2019"] %></p>
             </div>
         </div>
-        <h3 class="small-title">Key platforms <i class="fa-brands fa-app-store-ios"></i></h3>
+            <h3 class="small-title">Key platforms <i class="fa-brands fa-app-store-ios" aria-hidden="true"></i></h3>
         <div class="info__container">
             <ul class="info-card__list">
           <% ecommerce.key_platforms.forEach(p => { %>
@@ -106,7 +105,7 @@
     </section>
 
     <section>
-      <h2 class="subtitle">Digital Entrepreneurship <i class="fa-solid fa-tachograph-digital"></i></h2>
+      <h2 class="subtitle">Digital Entrepreneurship <i class="fa-solid fa-tachograph-digital" aria-hidden="true"></i></h2>
       <% if (entrepreneurship) { %>
         <div class="info__container">
           <ul class="info-card__list digital-en">
@@ -127,11 +126,11 @@
     </section>
 
     <section class="section">
-      <h2>Metrics <i class="fa-solid fa-table"></i></h2>
+      <h2>Metrics <i class="fa-solid fa-table" aria-hidden="true"></i></h2>
       <% if (metrics) { %>
         <div class="info__container metrics">
           <article class="info-card">
-            <h3 >Verified <i class="fa-solid fa-check-double"></i></h3>
+            <h3 >Verified <i class="fa-solid fa-check-double" aria-hidden="true"></i></h3>
             <ul>
               <% metrics.verified.forEach(v => { %>
                 <li>
@@ -143,7 +142,7 @@
             </ul>
           </article>
           <article class="info-card">
-            <h3 >Claims (to verify) <i class="fa-solid fa-clock-rotate-left"></i></h3>
+            <h3 >Claims (to verify) <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i></h3>
             <ul>
               <% metrics.claims_or_to_verify.forEach(c => { %>
                 <li>
@@ -158,7 +157,7 @@
     </section>
 
     <section class="section">
-      <h2 >Future Trends <i class="fa-solid fa-arrow-trend-up"></i></h2>
+      <h2 >Future Trends <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i></h2>
       <% if (futureTrends) { %>
         <div class="info__container">
           <ul class="info-card__list">

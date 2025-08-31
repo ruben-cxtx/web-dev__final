@@ -10,7 +10,7 @@
 </head>
 <body>
   <%- include("partials/header") %>
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="page-hero">
       <h1>Sources</h1>
     </section>
@@ -31,7 +31,7 @@
                 <td><%= source.name %></td>
                 <td><%= source.page %></td>
                 <td>
-                  <a href="<%= source.url %>" target="_blank" >link</a>
+                  <a href="<%= source.url %>" target="_blank" rel="noopener noreferrer">link</a>
                 </td>
               </tr>
             <% }) %>

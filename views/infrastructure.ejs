@@ -6,8 +6,6 @@
     <title>Infrastructure</title>
     <link rel="stylesheet" href="/styles/styles.css" />
     <link rel="stylesheet" href="/styles/infras.css" />
-    <link rel="stylesheet" href="/styles/timeline.css" />
-    <link rel="stylesheet" href="/styles/index.css" />
     <script src="https://kit.fontawesome.com/8f4601af06.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -118,7 +116,31 @@
             </div>
         </article>
     </section>
+    <section class="providers" aria-label="providers section">
+        <h2>Providers</h2>
+        <div class="cards__container">
+            <% providersInfo.forEach(provider => { %>
+                <div class="card-provider">
+                    <figure class="card-media">
+                    <img src="<%= provider.img_url  %>" alt="<%= provider.id %> logo">
+                    </figure>
+                    <div class="card-text">
+                        <h3><%= provider.brand %></h3>
+                        <p><strong>Type</strong>: <%= provider.type %></p>
+                        <p><strong>Status</strong>: <span class="status"><%= provider.status %></span></p>
+                        <p><strong>Summary</strong>: <%= provider.summary %></p>
+                        <p><strong>Network</strong>:
+                        <% for (const key in provider.network) { %>
+                        <span><%= key %>: <%= provider.network[key] %></span>
+                        <% } %>
+                        </p>
+                        <p><strong>Website: </strong><a href="<%= provider.website %>" target="_blank">link</a></p>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+
+    </section>
 <%- include("partials/footer") %>
 </body>
 </html>
-

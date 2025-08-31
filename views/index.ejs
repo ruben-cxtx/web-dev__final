@@ -10,7 +10,7 @@
 </head>
 <body>
     <%- include("partials/header") %>
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="hero-home">
             <div class="hero-home__text">
                 <h1 class="title">Panama's Internet History</h1>
@@ -82,7 +82,7 @@
                     <% stories.forEach(story => { %>
                         <div class="story__card">
                             <div class="user-info">
-                            <div class="avatar"><%- story.avatar %></div>
+                            <div class="avatar" role="img" aria-label="Avatar for <%= story.user %>"><%- story.avatar %></div>
                             <h4 class="username"><%= story.user %></h4>
                             </div>
                             <div class="story-text">
@@ -95,6 +95,5 @@
         </div>
     </section>
     <%- include("partials/footer") %>
-    <script src="/js/home.js"></script>
-</body>
+  </body>
 </html>

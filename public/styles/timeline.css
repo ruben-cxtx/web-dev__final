@@ -8,9 +8,6 @@
     margin-bottom: var(--space-sm);
 }
 
-.img {
-    width: 100vw;
-}
 
 @media (min-width: 48em) {
     .hero-timeline {
@@ -38,23 +35,7 @@
     }
 }
 
-.cards__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--space-md);
-}
-
 @media (min-width: 40em) {
-    .cards__container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex-flow: wrap;
-        justify-content: start;
-        place-content: center;
-    }
-
     .key-insights,
     .timeline__container{
         padding: 2em;
@@ -73,23 +54,6 @@
 }
 
 
-.time__card {
-    width: clamp(250px, 60vw, 400px);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-    border: 2px solid var(--bg-drk);
-    border-radius: 0 0 12px 12px;
-}
-
-.time__year {
-    text-align: center;
-    height: 50px;
-    align-content: center;
-    color: var(--primary-ink);
-    border-bottom: 2px solid var(--bg-drk);
-}
-
 #blue {
     background: var(--primary-hgl);
 }
@@ -97,16 +61,5 @@
 #red {
     background: var(--secondary-hgl);
 }
-
-
-
-.time__text {
-    padding: var(--space-sm);
-}
-
-.time__text p {
-    margin-top: var(--space-xs);
-}
-
 
 

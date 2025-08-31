@@ -9,9 +9,7 @@ import { fileURLToPath } from "node:url";
 import generateName from 'sillyname';
 import { createAvatar } from '@dicebear/core';
 import * as funEmoji from '@dicebear/fun-emoji';
-// import helmet from "helmet";
 import { randomUUID } from "node:crypto";
-// import rateLimit from "express-rate-limit";
 
 
 dotenv.config();
@@ -23,20 +21,18 @@ const __dirname = dirname(__filename);
 
 
 app.use(urlencoded({ extended: true }));
-// app.use(express.json({ limit: "10kb" }));
-// app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
 app.use(express.static(path.join(__dirname, 'public')));
-
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-function alternateColors(num1, num2, count) {
-    let result = [];
-    for (let i = 0; i < count; i++) {
-        result.push(i % 2 === 0 ? "blue" : "red");
-    }
-    return result;
+
+
+function alternateColors(count) {
+  const result = [];
+  for (let i = 0; i < count; i++) {
+    result.push(i % 2 === 0 ? "blue" : "red");
+  }
+  return result;
 }
 
 const stories = new Map();
@@ -106,7 +102,6 @@ app.post("/submit", async (req, res) => {
     const { title, story } = req.body;
     const id = randomUUID();
     const user = generateName();
-    console.log(user);
     const avatar = createAvatar(funEmoji, {
     seed: user,
     size: 64,
@@ -151,8 +146,7 @@ app.get('/timeline', async (req, res) => {
         const timeline = timelineData.timeline;
 
 
-        const colors = alternateColors(1, 2, timeline.length);
-        console.log(colors)
+        const colors = alternateColors(timeline.length);
         res.render('timeline', {keyInsights, timeline, colors});
 
     } catch(err) {
@@ -181,8 +175,6 @@ app.get('/infrastructure', async (req, res) => {
 
         const providersInfo = providers.providers;
 
-        console.log(ixp)
-
         res.render('infrastructure', {
             timeline,
             seaCables,
@@ -205,7 +197,6 @@ app.get('/inclusion', async (req, res) => {
   let goverment = null;
   let plans = null;
   let platforms = null;
-  let governmentPlatform = null;
 
   try {
     const inclusionRaw = await fs.readFile(path.join(__dirname, 'public', 'information', 'inclusion.json'), 'utf-8');
@@ -267,6 +258,3 @@ app.listen(PORT, async () => {
 
     console.log(`App running on port ${PORT}`);
 })
-
-
-

@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "no-duplicate-selectors": true,
+    "declaration-block-no-duplicate-properties": [
+      true,
+      { "ignore": ["consecutive-duplicates-with-different-values"] }
+    ]
+  },
+  "ignoreFiles": [
+    "node_modules/**",
+    "public/assets/**"
+  ]
+}

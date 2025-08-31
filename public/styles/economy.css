@@ -13,24 +13,17 @@ h2 {
 
 .info-card {
     grid-column: span 6;
+    height: fit-content;
+    flex: 1;
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
 }
 
 
 
-.card-media {
-    aspect-ratio: 16 / 9;
-    border-radius: inherit;
-    overflow: hidden;
-    background: #f3f3f3;
-    margin-bottom: var(--space-sm);
-}
-
-.card-media > img{
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
-}
+/* .card-media moved to styles.css (shared) */
 
 :focus-visible {
     outline: 2px solid var(--primary);
@@ -38,52 +31,6 @@ h2 {
 }
 
 /*-------- HERO SECTION --------*/
-
-
-.hero__container {
-    padding: var(--space-md);
-    display: flex;
-    flex-direction: column;
-}
-
-
-@media ( min-width: 48em ) {
-    .hero__container {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 30vh;
-        display: flex;
-        align-items: end;
-    }
-
-    .hero__container img {
-        display: none !important;
-    }
-
-    .hero__container p {
-        width: 50vw;
-    }
-
-    .hero__container-text {
-        z-index: 1;
-    }
-
-    .bg-dim {
-        position: relative;
-        isolation: isolate;
-        --dim: .5;
-    }
-    .bg-dim::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0,0,0,var(--dim));
-        z-index: -1;
-        pointer-events: none;
-    }
-
-}
 
 
 .info__container {
@@ -101,42 +48,14 @@ main {
     gap: var(--space-lg);
 }
 
-.info-card {
-    height: fit-content;
-    flex: 1;
-    padding: var(--space-xl);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-}
+
 
 
 .section {
     display: block;
 }
 
-.info-card__list li {
-    list-style: none;
-    width: clamp(300px, 25vw, 400px);
-    margin-bottom: var(--space-sm);
-    background: #fafafa;
-    padding: var(--space-md);
-    border-radius: 12px;
-}
-
-.info-card__list {
-    display: flex;
-    gap: var(--space-sm);
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media (min-width: 40em) {
-    .info-card__list {
-        flex-direction: row;
-    }
-}
+/* info-card__list shared in styles.css */
 
 
 

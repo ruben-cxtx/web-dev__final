@@ -8,52 +8,7 @@
 
 
 }
-
-
-.hero__container {
-    padding: var(--space-md);
-    display: flex;
-    flex-direction: column;
-}
-
-
-@media ( min-width: 48em ) {
-    .hero__container {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 30vh;
-        display: flex;
-        align-items: end;
-    }
-
-    .hero__container img {
-        display: none !important;
-    }
-
-    .hero__container p {
-        width: 50vw;
-    }
-
-    .hero__container-text {
-        z-index: 1;
-    }
-
-    .bg-dim {
-        position: relative;
-        isolation: isolate;
-        --dim: .5;
-    }
-    .bg-dim::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0,0,0,var(--dim));
-        z-index: -1;
-        pointer-events: none;
-    }
-
-}
+/* hero layout is shared in styles.css */
 
 .programs__container {
     display: flex;
