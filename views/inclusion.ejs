@@ -13,9 +13,8 @@
     <main id="main-content" tabindex="-1">
         <section class="hero__container bg-dim">
             <div class="hero__container-text">
-                <h1>Digital Inclusion</h1>
-                <h1>& Government Initiatives</h1>
-                <p style="text-align: right;">How Panama’s public sector and institutions worked to make the internet accessible and integrate digital services into governance, shifting access from urban elites to broad, inclusive usage across classes and geographies.</p>
+                <h1>Digital Inclusion &amp; Government Initiatives</h1>
+                <p class="hero__intro-right">How Panama’s public sector and institutions worked to make the internet accessible and integrate digital services into governance, shifting access from urban elites to broad, inclusive usage across classes and geographies.</p>
             </div>
             <img src="/assets/inclusion-hero.jpg" alt="Panama Woman">
         </section>
@@ -61,7 +60,7 @@
                 </div>
                 </div>
                 <div class="article__btn">
-                    <a href="<%= program.read_more %>" target="_blank" rel="noopener noreferrer" aria-label="Read more about <%= program.title %>"><button type="button" class="btn-program"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i> Read more</button></a>
+                    <a class="btn-program" href="<%= program.read_more %>" target="_blank" rel="noopener noreferrer" aria-label="Read more about <%= program.title %>"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i> Read more</a>
                 </div>
             </article>
         <% }); %>
@@ -81,12 +80,10 @@
       <ul class="info-card__list">
           <% platforms.forEach(platform => { %>
           <li>
-              <img src="" alt="" aria-hidden="true">
               <h4><%= platform.name %></h4>
               <p><%= platform.purpose %></p>
           </li>
           <% }); %>
-
       </ul>
   </section>
   <h2>Strategic Agendas and Plans</h2>

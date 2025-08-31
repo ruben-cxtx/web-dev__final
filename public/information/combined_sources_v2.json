@@ -14,46 +14,13 @@
     "page": "inclusion",
     "url": "https://www.asep.gob.pa/estadisticas/telecomunicaciones"
   },
-  {
-    "name": "Reuters - Millicom acquires Cable Onda (2018)",
-    "page": "timeline",
-    "url": "https://www.reuters.com/article/us-millicom-panama-idUSKBN1HJ2JD"
-  },
-  {
-    "name": "Reuters - Millicom acquires Cable Onda (2018)",
-    "page": "infrastructure",
-    "url": "https://www.reuters.com/article/us-millicom-panama-idUSKBN1HJ2JD"
-  },
-  {
-    "name": "Reuters - Telefónica / Movistar Panama sale (related reporting)",
-    "page": "timeline",
-    "url": "https://www.reuters.com/article/us-telefonica-panama-idUSKCN1TB2U3"
-  },
-  {
-    "name": "Reuters - Telefónica / Movistar Panama sale (related reporting)",
-    "page": "infrastructure",
-    "url": "https://www.reuters.com/article/us-telefonica-panama-idUSKCN1TB2U3"
-  },
-  {
-    "name": "Oxford Business Group - Panama Telecommunications overview",
-    "page": "infrastructure",
-    "url": "https://oxfordbusinessgroup.com/panama-2019/telecommunications"
-  },
+
   {
     "name": "Infoplazas (official photos / Flickr)",
     "page": "inclusion",
-    "url": "https://www.flickr.com/photos/infoplazas"
+    "url": "https://www.flickr.com/photos/infoplazasaip"
   },
-  {
-    "name": "AIG - 'Internet Para Todos' program",
-    "page": "inclusion",
-    "url": "https://www.aig.gob.pa/programas/internet-para-todos"
-  },
-  {
-    "name": "OECD - Digital Government Review: Panama",
-    "page": "inclusion",
-    "url": "https://www.oecd.org/digital/government/digital-government-review-panama.htm"
-  },
+
   {
     "name": "Statista - Latin America E-Commerce data",
     "page": "economy",
@@ -67,13 +34,9 @@
   {
     "name": "Startup Panama (ecosystem / events)",
     "page": "economy",
-    "url": "https://startuppanama.com/"
+    "url": "https://www.facebook.com/StartupPanama"
   },
-  {
-    "name": "La Estrella de Panamá - 5G trials / local news",
-    "page": "timeline",
-    "url": "https://www.laestrella.com.pa/nacional/240101/panama-inicia-pruebas-5g"
-  },
+
   {
     "name": "ASEP – Indicadores de Internet 2014–2018 (estadísticas)",
     "page": "infrastructure",
@@ -104,11 +67,7 @@
     "page": "infrastructure",
     "url": "https://www.globenewswire.com/news-release/2019/08/29/1908336/0/en/Millicom-closes-acquisition-of-Telef%C3%B3nica-operation-in-Panama.html"
   },
-  {
-    "name": "Reuters – Digicel plans to liquidate Panama business after rivals’ merger approved (Apr 6, 2022)",
-    "page": "infrastructure",
-    "url": "https://www.reuters.com/business/media-telecom/digicel-plans-liquidate-panama-business-after-rivals-merger-approved-2022-04-07/"
-  },
+
   {
     "name": "Opensignal – Panama, June 2024: Mobile Network Experience Report",
     "page": "infrastructure",
@@ -184,16 +143,7 @@
     "page": "infrastructure",
     "url": "https://www.millicom.com/media/4955/millicom-2019-annual-report.pdf"
   },
-  {
-    "name": "Announces Liberty Latin America and Cable & Wireless merger with Claro Panama.",
-    "page": "infrastructure",
-    "url": "https://www.libertyglobal.com/liberty-latin-america-announces-creation-of-joint-venture-in-panama/"
-  },
-  {
-    "name": "News coverage of Digicel’s exit from the Panamanian market in 2022.",
-    "page": "infrastructure",
-    "url": "https://www.larepublica.net/noticia/digicel-sale-del-mercado-panameno"
-  },
+
   {
     "name": "Official government portal for Panama’s digital innovation strategies (AIG).",
     "page": "timeline",
@@ -214,34 +164,30 @@
     "page": "economy",
     "url": "https://www.statista.com/statistics/209117/internet-usage-penetration-in-panama/"
   },
+
   {
-    "name": "Details Tigo Panama’s 5G trial in 2023 using the 3.5 GHz band.",
+    "name": "Tigo Panamá – official site",
     "page": "infrastructure",
-    "url": "https://www.telecomreviewamericas.com/index.php/articles/telecom-operators/5002-tigo-panama-successfully-tests-5g-in-3-5-ghz-band"
+    "url": "https://www.tigo.com.pa/"
   },
   {
-    "name": "Tigo Panamá logo image used in provider card display.",
+    "name": "+Movil (Cable & Wireless Panamá) – official site",
     "page": "infrastructure",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tigo_logo.svg/2560px-Tigo_logo.svg.png"
+    "url": "https://www.masmovilpanama.com/"
   },
   {
-    "name": "Cable & Wireless Panamá logo image for visual identification.",
+    "name": "Claro – company site",
     "page": "infrastructure",
-    "url": "https://upload.wikimedia.org/wikipedia/en/3/30/Cable_%26_Wireless_Panama_logo.png"
+    "url": "https://www.claro.com/"
   },
   {
-    "name": "Claro Panamá logo image for provider branding on cards.",
+    "name": "Digicel – Wikipedia overview",
     "page": "infrastructure",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Claro_logo.svg"
+    "url": "https://en.wikipedia.org/wiki/Digicel"
   },
   {
-    "name": "Digicel Panamá logo used in the historical provider section.",
+    "name": "Movistar – Wikipedia overview",
     "page": "infrastructure",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Digicel_logo.svg"
-  },
-  {
-    "name": "Movistar Panamá logo used for past market overview.",
-    "page": "infrastructure",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Movistar_logo.svg"
+    "url": "https://en.wikipedia.org/wiki/Movistar"
   }
 ]

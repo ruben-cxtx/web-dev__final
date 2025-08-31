@@ -98,6 +98,8 @@ img {
     flex-direction: column;
 }
 
+.hero__intro-right { text-align: right; }
+
 @media (min-width: 48em) {
     .hero__container {
         background-size: cover;
@@ -187,7 +189,7 @@ nav > * { min-width: 0; }
 
 nav a {
     cursor: pointer;
-    color: var(--muted);
+    color: var(--bg-drk);
 }
 
 .nav__links-texts { display: none; }
@@ -200,6 +202,31 @@ nav a {
     align-items: center;
     gap: clamp(0.7em, 0.5vw, 1.5em);
     flex-wrap: wrap;
+}
+
+/* Generic focus styles for interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--primary-hgl);
+    outline-offset: 2px;
+}
+
+/* Link-style button for program links */
+.btn-program {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 0.5rem 0.9rem;
+    border: 2px solid var(--bg-drk);
+    border-radius: 9999px;
+    background: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+.btn-program:hover {
+    background: var(--bg-drk);
+    color: var(--primary-ink);
 }
 .nav__links-icons > li { display: flex; }
 .nav__links-icons a {

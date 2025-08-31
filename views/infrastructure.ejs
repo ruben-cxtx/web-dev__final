@@ -10,7 +10,7 @@
 </head>
 <body>
 <%- include("partials/header") %>
-    <main class="infra__hero" aria-label="hero section">
+    <main id="main-content" tabindex="-1" class="infra__hero" aria-label="hero section">
         <div class="hero-infra__text">
             <h2 class="title">Infrastructure and Providers</h2>
             <p class="text">Understand how Panama built its <span class="highlight-blue">digital backbone</span>: submarine cables, broadband growth, mobile internet, and the evolution of ISPs and mobile operators through <span class="highlight-red">competition</span> and <span class="highlight-red">mergers.</span></p>
@@ -24,7 +24,7 @@
             <div class="cards__container">
                 <% timeline.forEach(e => { %>
                     <div class="time__card">
-                        <div class="time__year" id="infra_time">
+                        <div class="time__year">
                             <h2><%= e.year %></h2>
                         </div>
                         <div class="time__text">

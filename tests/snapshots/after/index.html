@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="/styles/styles.css" rel="stylesheet">
+    <link href="/styles/index.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8f4601af06.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    [object Promise]
+    <main id="main-content" tabindex="-1">
+        <section class="hero-home">
+            <div class="hero-home__text">
+                <h1 class="title">Panama's Internet History</h1>
+                <p class="text">Welcome to my Course Work 2!</p>
+                <p class="text">In this web app I will be sharing my country's internet History from 2002 to 2025</p>
+            </div>
+            <img src="/assets/panama-flag.jpg" alt="Panama flag">
+        </section>
+        <section class="about">
+        <h2 class="subtitle">About Panama</h2>
+        <div class="about__container">
+            <div class="about__container__text">
+        <h3 class="small-title">Official name</h3>
+        <p class="text">Republic of Panama</p>
+        </div>
+        <div class="about__container__text">
+        <h3 class="small-title">Population</h3>
+        <p class="text">4314768 Million</p>
+        </div>
+        <div class="about__container__text">
+        <h3 class="small-title">Capital</h3>
+        <p class="text">Panama City</p>
+        </div>
+        <div class="about__container__text">
+        <h3 class="small-title">Language</h3>
+        <p class="text">Spanish</p>
+        </div>
+        <div class="about__container__text">
+        <h3 class="small-title">Flag</h3>
+        <img src="/assets/panama-flag.jpg" alt="Panama flag">
+        </div>
+        </div>
+    </section>
+    </main>
+    <section class="articles">
+        <h2 class="subtitle">Articles</h2>
+        <div class="articles__container">
+            
+                <div class="article__card">
+                    <img src="/assets/timeline.jpg" alt="Starlink satellite coverage over Panama">
+                    <h4 class="x-small-text">Timeline</h4>
+                    <h3 class="small-title">Internet Evolution</h3>
+                    <p class="text">An overview of Panama’s internet journey from dial-up to 5G. Explore major milestones, broadband expansion, and government policy shaping connectivity from 2001 to 2024...</p>
+                    <button class="btn-read-more" type="button" aria-label="Read more about Internet Evolution"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span> Read more</span></button>
+                </div>
+            
+                <div class="article__card">
+                    <img src="/assets/infrastructure.jpg" alt="Telecommunication towers and Panama City skyline">
+                    <h4 class="x-small-text">Infrastructure</h4>
+                    <h3 class="small-title">Digital Backbone</h3>
+                    <p class="text">Understand how Panama built its digital backbone: submarine cables, broadband growth, mobile internet, and the evolution of ISPs and mobile operators through competition and mergers...</p>
+                    <button class="btn-read-more" type="button" aria-label="Read more about Digital Backbone"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span> Read more</span></button>
+                </div>
+            
+                <div class="article__card">
+                    <img src="/assets/inclusion.jpg" alt="Students using computers in a rural school in Panama">
+                    <h4 class="x-small-text">Inclusion</h4>
+                    <h3 class="small-title">Connecting All</h3>
+                    <p class="text">Discover Panama’s public access programs—Infoplazas, Internet Para Todos, AIG—and digital policies that improved access for underserved communities from 2004 to 2030...</p>
+                    <button class="btn-read-more" type="button" aria-label="Read more about Connecting All"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span> Read more</span></button>
+                </div>
+            
+                <div class="article__card">
+                    <img src="/assets/economy.jpg" alt="Smart city visual with digital icons over Panama City">
+                    <h4 class="x-small-text">Economy</h4>
+                    <h3 class="small-title">Digital Growth</h3>
+                    <p class="text">See how e-commerce, fintech, and digital entrepreneurship reshaped Panama’s economy. Includes fintech apps, Startup Panama, and growth trends from 2018 to 2025 and beyond...</p>
+                    <button class="btn-read-more" type="button" aria-label="Read more about Digital Growth"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span> Read more</span></button>
+                </div>
+            
+        </div>
+    </section>
+    <section class="stories">
+        <div class="stories__main">
+        <div class="stories-text">
+        <h2 class="subtitle">Share your Story</h2>
+        <p class="text">Share with the world core memories
+        you’ve had using the internet when
+        you were younger!</p>
+        </div>
+        <form action="/submit" method="post" class="form-story">
+            <label for="title">Title</label>
+            <input name="title" type="text" placeholder="Title..." id="title" required>
+            <label for="story">Story</label>
+            <textarea id="story" name="story" rows="5" cols="33" placeholder="Your amazing story..."></textarea>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+        </div>
+        <div class="stories__container">
+            
+                <h3>No stories yet!</h3>
+                
+        </div>
+    </section>
+    [object Promise]
+  </body>
+</html>

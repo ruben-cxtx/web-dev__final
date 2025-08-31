@@ -17,8 +17,13 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@axe-core/cli": "^4.10.2",
+    "html-validate": "^10.0.0",
+    "http-server": "^14.1.1",
+    "pa11y": "^9.0.0",
     "stylelint": "^16.8.1",
-    "stylelint-config-standard": "^36.0.1"
+    "stylelint-config-standard": "^36.0.1",
+    "vnu-jar": "^24.10.17"
   },
   "bugs": {
     "url": "https://github.com/ruben-cxtx/web-dev__final/issues"

@@ -20,7 +20,7 @@
     </section>
 
     <section>
-      <h2 class="subtitle">Online Banking & Fintech <i class="fa-solid fa-piggy-bank" aria-hidden="true"></i></h2>
+      <h2 class="subtitle">Online Banking &amp; Fintech <i class="fa-solid fa-piggy-bank" aria-hidden="true"></i></h2>
         <div class="info__container">
       <% if (fintech) { %>
           <article class="info-card">
@@ -91,7 +91,7 @@
         <div class="info__container">
             <ul class="info-card__list">
           <% ecommerce.key_platforms.forEach(p => { %>
-            <li id="info-img"><div class="info-card info-w-img">
+            <li class="info-img"><div class="info-card info-w-img">
                     <figure class="card-media">
                         <img src="<%= p.img_url %>" alt="<%= p.name %> logo">
                     </figure>
@@ -116,8 +116,8 @@
                 <img src="<%=p.img_url%>" alt="<%=p.name%> image">
               </figure>
               <h3><%= p.name %></h3>
-              <p id="type"><%= p.type %> </p>
-                 <p id="status"><em><%= p.status %></em></p>
+              <p class="type"><%= p.type %> </p>
+                 <p class="status"><em><%= p.status %></em></p>
             </article></li>
           <% }) %>
           </ul>
@@ -162,7 +162,7 @@
         <div class="info__container">
           <ul class="info-card__list">
           <% futureTrends.items.forEach(it => { %>
-            <li id="future"><article class="info-card">
+            <li class="future"><article class="info-card">
               <h3 class="small-title"><%= it.topic %></h3>
               <p class="text"><%= it.notes %></p>
             </article></li>
