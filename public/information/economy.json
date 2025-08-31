@@ -1,12 +1,4 @@
 {
-  "meta": {
-    "page": 5,
-    "title": "The Rise of Panama’s Digital Economy & E-Commerce",
-    "country": "Panama",
-    "last_updated": "2025-08-28",
-    "notes": "Market size, platforms, wallets, entrepreneurship programs, and forward-looking trends. Figures include verifiable stats; disputed claims captured under `claims`."
-  },
-
   "sections": {
     "online_banking_fintech": {
       "highlights": [
@@ -33,66 +25,53 @@
           "type": "bank-led wallet",
           "status": "Active",
           "users": "1.4M+ (Jan 2025, media report)",
-          "merchants": "28,000+",
-          "notes": "Moved US$9.5B in 2023 through Banco General’s digital channels; 68% of BG transactions were digital (2024)."
+          "merchants": "28,000+"
         },
         {
           "img_url": "https://images.seeklogo.com/logo-png/37/1/nequi-logo-png_seeklogo-377455.png",
           "name": "Nequi (Panamá)",
           "type": "neobank wallet (Banistmo product)",
-          "status": "Exited Dec 31, 2024",
-          "notes": "Users could migrate to Banistmo Cuenta Express.",
-          "source_ids": ["nequi_exit_pa"]
+          "status": "Exited Dec 31, 2024"
         },
         {
           "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.ecotvpanama.com%2Fp%2Fc74acdd3ed76e2bc57c3c47f2deb42f9%2Fadjuntos%2F323%2Fimagenes%2F018%2F381%2F0018381151%2F1200x675%2Fsmart%2Flisto-wallet-agost-2023png.png&f=1&nofb=1&ipt=11d04dc17dd974fe5f77556de09c3b85477b6c9ee041519605aff6074262f33c",
           "name": "Listo Wallet (gov benefits)",
           "type": "government wallet / benefits disbursement",
-          "status": "Active",
-          "notes": "Used for programs like PASE-U / IFARHU disbursements.",
-          "source_ids": ["listo_wallet_lr1", "listo_wallet_lr2"]
+          "status": "Active"
         }
       ]
     },
 
     "ecommerce_growth": {
       "market_size_usd": {
-        "2024_estimate": 1173000000,
-        "estimation_method": "Statista DMI / ECDB coverage as reported by La Estrella + ECDB sample page",
-        "source_ids": ["laestrella_statista_2024", "ecdb_panama_sample"]
+        "2024_estimate": 1173000000
       },
       "online_share_of_retail": {
-        "2024_range": "5–10%",
-        "source_ids": ["ecdb_panama_sample"]
+        "2024_range": "5–10%"
       },
       "covid_surge": {
-        "2020_vs_2019": "~40% increase in online operations",
-        "source_ids": ["icex_40_growth_2020"]
+        "2020_vs_2019": "~40% increase in online operations"
       },
       "key_platforms": [
         {
           "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodix.com%2Flogo%2F1653978.png&f=1&nofb=1&ipt=ef00dd08ce6e68dd744a0339387e1030e1c2605a10ec78e9a3b8ebe98e95ec05",
           "name": "Mercado Libre",
-          "status": "Regional marketplace used by Panamanians (no dedicated .pa domain).",
-          "source_ids": ["trade_ict_2023"]
+          "status": "Regional marketplace used by Panamanians (no dedicated .pa domain)."
         },
         {
           "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.AekXaPpuq1BgY05q29zKHwAAAA%3Fpid%3DApi&f=1&ipt=2a09656a41e8f21a1aca33943639b7e38f79ad4531206213e7f62d152cbf4a0c",
           "name": "Linio",
-          "status": "Closed Panama operations in 2019.",
-          "source_ids": ["linio_closure_pdf", "linio_closure_press"]
+          "status": "Closed Panama operations in 2019."
         },
         {
           "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogos-marcas.com%2Fwp-content%2Fuploads%2F2022%2F03%2FOLX-Emblema.jpg&f=1&nofb=1&ipt=680cd898f648267ee612b07b5ecc98175568b9a6008e8a510ab6ab870b126ca3",
           "name": "OLX",
-          "status": "Merged operations into Encuentra24 in 2020.",
-          "source_ids": ["olx_encuentra24_blog", "olx_encuentra24_prn"]
+          "status": "Merged operations into Encuentra24 in 2020."
         },
         {
           "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffrontierdv.com%2Fwp-content%2Fuploads%2F2017%2F03%2Fencuentra24news.png&f=1&nofb=1&ipt=8845ac2f688bf7d7eb5daa5ccba04141e549118961b32c2100328eddf791026d",
           "name": "Encuentra24",
-          "status": "Active classifieds & marketplace; acquired OLX ops in CA.",
-          "source_ids": ["olx_encuentra24_prn", "encuentra24_site", "encuentra24_wiki"]
+          "status": "Active classifieds & marketplace; acquired OLX ops in CA."
         }
       ]
     },
@@ -103,22 +82,19 @@
           "img_url":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.oteima.ac.pa%2Fwp-content%2Fgallery%2Fsenacyt-ronda-ii%2F454430674_18450637237023052_3260622092130819928_n.jpg&f=1&nofb=1&ipt=58c5f4131b2446986ce4c0c64edbd489c4892ef1c46e19f37addea0922af0a1a",
           "name": "SENACYT – Convocatoria para Emprendimientos Innovadores 2024",
           "type": "public grants / seed",
-          "status": "Closed rounds in 2024; recurring program",
-          "source_ids": ["senacyt_conv_2024_apr", "senacyt_conv_2024_jul", "senacyt_fondos_page"]
+          "status": "Closed rounds in 2024; recurring program"
         },
         {
           "img_url":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Felcapitalfinanciero.com%2Fwp-content%2Fuploads%2F2023%2F10%2FFectivo-premiaci%25C3%25B3n.jpeg&f=1&nofb=1&ipt=76bdf740ce1c4842c0c5a938f4b815fb7148ca19fa2fc243b45a156812370823",
           "name": "PanamaStartups",
           "type": "community / network",
-          "status": "Active",
-          "source_ids": ["panamastartups_site"]
+          "status": "Active"
         },
         {
           "img_url":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.ZKh3nm3SNnCjBLZltxwNEAHaEB%3Fpid%3DApi&f=1&ipt=cadac73c1d21dfa59610e6490727fde703bea72fd3648a986532796934ced37f",
           "name": "Startup Weekend Panamá",
           "type": "events",
-          "status": "Recurring global program with local editions",
-          "source_ids": ["startupweekend_global", "swpty_social"]
+          "status": "Recurring global program with local editions"
         }
       ]
     },
@@ -127,36 +103,19 @@
       "items": [
         {
           "topic": "Online education (MOOCs) & higher-ed e-learning",
-          "notes": "UTP & UP offer e-learning; MOOCs accessible via global platforms.",
-          "source_ids": ["oecd_elearning_panama_2025", "edx_home", "coursera_home"]
+          "notes": "UTP & UP offer e-learning; MOOCs accessible via global platforms."
         },
         {
           "topic": "Telemedicine & digital health",
-          "notes": "Telehealth legal framework (2021) and MINSA program expansion in 2024–2025.",
-          "source_ids": ["wb_telemed_2024", "minsa_telemed_2024", "minsa_telemed_2025"]
+          "notes": "Telehealth legal framework (2021) and MINSA program expansion in 2024–2025."
         },
         {
           "topic": "IoT and analytics in logistics (Canal & ports)",
-          "notes": "Ongoing digitization, predictive analytics use cases around the Canal and logistics ecosystem.",
-          "source_ids": ["lidd_panama_canal_ai", "psa_panama_digitalization", "forbes_canal_supplychain"]
+          "notes": "Ongoing digitization, predictive analytics use cases around the Canal and logistics ecosystem."
         },
         {
           "topic": "Cash-light society",
-          "notes": "Rising wallet use and contactless growth; digital payment rails via Telered/ACH.",
-          "source_ids": ["visa_wallets_latam_blog", "ensegundos_contactless_2025", "fsap_payments_2024"]
-        }
-      ],
-      "media_suggestions": [
-        {
-          "type": "chart_idea",
-          "title": "E-commerce share of retail (2018–2024)",
-          "notes": "Use ECDB range (5–10%) for 2024; avoid hard 2018/2022 % unless independently verified."
-        },
-        {
-          "type": "screenshot_idea",
-          "title": "Local marketplace UX",
-          "notes": "Screenshot of Encuentra24 listing page.",
-          "source_ids": ["encuentra24_site"]
+          "notes": "Rising wallet use and contactless growth; digital payment rails via Telered/ACH."
         }
       ]
     }
@@ -166,52 +125,39 @@
     "verified": [
       {
         "name": "E-commerce market size (2024)",
-        "value_usd": 1173000000,
-        "source_ids": ["laestrella_statista_2024"]
+        "value_usd": 1173000000
       },
       {
         "name": "Online share of retail (2024, range)",
-        "value": "5–10%",
-        "source_ids": ["ecdb_panama_sample"]
+        "value": "5–10%"
       },
       {
         "name": "COVID-era online operations surge (2020)",
-        "value": "~40%",
-        "source_ids": ["icex_40_growth_2020"]
+        "value": "~40%"
       },
       {
         "name": "Yappy merchants",
-        "value": "28,000+",
-        "source_ids": ["yappy_merchants"]
+        "value": "28,000+"
       }
     ],
     "claims_or_to_verify": [
       {
         "claim": "E-commerce penetration rose from 8% (2018) to 22% (2022).",
-        "status": "unverified / likely inflated for Panama",
-        "why": "Recent ECDB shows online share 5–10% in 2024; 22% in 2022 appears inconsistent.",
-        "suggested_action": "Replace with ECDB’s 5–10% range for 2024 or license Statista series to validate 2018–2022.",
-        "source_ids": ["ecdb_panama_sample", "summa_8_percent_2020"]
+        "status": "unverified / likely inflated for Panama"
       },
       {
         "claim": "Over 1M Panamanians shop online monthly (2024).",
-        "status": "unverified",
-        "why": "No official monthly ‘digital buyers’ count located; proxied by market size and internet users.",
-        "suggested_action": "License Statista ‘Digital Buyers in Panama’ or ECDB users KPI.",
-        "source_ids": ["datareportal_2024_panama"]
+        "status": "unverified"
       },
       {
         "claim": "Fintech investments reached US$15M in 2023 (+35% YoY).",
-        "status": "unverified",
-        "why": "No authoritative country-level VC/fintech total found; avoid without LAVCA/Crunchbase deal list.",
-        "suggested_action": "Compile deal-level list from LAVCA/Crunchbase; cite totals."
+        "status": "unverified"
       },
       {
         "claim": "Clínica y Soluciones’ Digipay wallet in Panama.",
-        "status": "unverified / not found",
-        "why": "Could not locate a Panamanian wallet by that brand; may refer to another ‘Digipay’.",
-        "suggested_action": "Confirm brand/entity and URL; otherwise omit."
+        "status": "unverified / not found"
       }
     ]
   }
 }
+

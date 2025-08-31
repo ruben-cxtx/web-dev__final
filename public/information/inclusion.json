@@ -1,55 +1,51 @@
 {
-  "page": "Digital Inclusion & Government Initiatives",
-  "last_updated": "2025-08-27",
-  "intro": "Overview of Panama’s community access programs, nationwide free Wi-Fi, and digital government agenda, with key milestones, metrics, and policies.",
-
-      "community_access_programs": [
-        {
-          "id": "infoplazas",
-          "title": "Infoplazas (Community Internet Centers)",
-          "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fensegundos.com.pa%2Fwp-content%2Fuploads%2F2023%2F04%2FIMG-20230427-WA0006.jpg&f=1&nofb=1&ipt=efa256bec514464e0d7ceb614214d334ba077939933a81ff20997f10158f616d",
-          "summary": "Physical community centers that provide public internet access, digital skills training, and e-services support across all provinces and several comarcas.",
-          "timeline": [
-            { "year": 2000, "event": "Program established under SENACYT (early deployments throughout the 2000s)." },
-            { "year": 2011, "event": "Government announces 220 Infoplazas nationwide." },
-            { "year": 2014, "event": "Official list shows at least 222 active Infoplazas (mid-year snapshot)." },
-            { "year": 2021, "event": "Infoplazas AIP continues expansion and partnerships (e.g., universities, municipalities)." },
-            { "year": 2025, "event": "Infoplazas AIP states '400+ Infoplazas' nationwide." }
-          ],
-          "metrics": {
-            "Sites in 2011": 220,
-            "Sites in 2014": 222,
-            "Sites in 2025": 400
-          },
-          "benefits": [
-            "Expanded access for rural and urban communities",
-            "Free or very low-cost connectivity and training",
-            "On-ramps for e-government transactions"
-          ],
-          "read_more": "https://www.infoplazas.org.pa/"
-        },
-        {
-          "id": "rni_internet_para_todos",
-          "title": "Red Nacional de Internet (Internet Para Todos)",
-          "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fensegundos.com.pa%2Fwp-content%2Fuploads%2F2018%2F11%2Finternet-de-las-cosas.jpg&f=1&nofb=1&ipt=a82c8fdcc8273236d92359104d5ec35736d233b8500a3d2a47fa981fa352dbf1",
-          "summary": "Nationwide free public Wi-Fi program operated by AIG. RNI 2.0 increases coverage and capacity to enable access to state digital services.",
-          "timeline": [
-            { "year": 2010, "event": "Launch of Internet Para Todos (RNI) as a free Wi-Fi network." },
-            { "year": 2011, "event": "Infoplazas and RNI integrated into broader digital inclusion push." },
-            { "year": 2020, "event": "Program modernization and continued expansion via RNI 2.0." }
-          ],
-          "metrics": {
-            "Corregimientos Target": 288,
-            "Population Reach Percentage": 80
-          },
-          "benefits": [
-            "Nationwide Wi-Fi coverage targeting 80% population reach",
-            "Focus on underserved corregimientos",
-            "Supports access to digital government services"
-          ],
-          "read_more": "https://www.internetparatodos.gob.pa/nosotros"
-        }
+  "community_access_programs": [
+    {
+      "id": "infoplazas",
+      "title": "Infoplazas (Community Internet Centers)",
+      "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fensegundos.com.pa%2Fwp-content%2Fuploads%2F2023%2F04%2FIMG-20230427-WA0006.jpg&f=1&nofb=1&ipt=efa256bec514464e0d7ceb614214d334ba077939933a81ff20997f10158f616d",
+      "summary": "Physical community centers that provide public internet access, digital skills training, and e-services support across all provinces and several comarcas.",
+      "timeline": [
+        { "year": 2000, "event": "Program established under SENACYT (early deployments throughout the 2000s)." },
+        { "year": 2011, "event": "Government announces 220 Infoplazas nationwide." },
+        { "year": 2014, "event": "Official list shows at least 222 active Infoplazas (mid-year snapshot)." },
+        { "year": 2021, "event": "Infoplazas AIP continues expansion and partnerships (e.g., universities, municipalities)." },
+        { "year": 2025, "event": "Infoplazas AIP states '400+ Infoplazas' nationwide." }
       ],
+      "metrics": {
+        "Sites in 2011": 220,
+        "Sites in 2014": 222,
+        "Sites in 2025": 400
+      },
+      "benefits": [
+        "Expanded access for rural and urban communities",
+        "Free or very low-cost connectivity and training",
+        "On-ramps for e-government transactions"
+      ],
+      "read_more": "https://www.infoplazas.org.pa/"
+    },
+    {
+      "id": "rni_internet_para_todos",
+      "title": "Red Nacional de Internet (Internet Para Todos)",
+      "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fensegundos.com.pa%2Fwp-content%2Fuploads%2F2018%2F11%2Finternet-de-las-cosas.jpg&f=1&nofb=1&ipt=a82c8fdcc8273236d92359104d5ec35736d233b8500a3d2a47fa981fa352dbf1",
+      "summary": "Nationwide free public Wi-Fi program operated by AIG. RNI 2.0 increases coverage and capacity to enable access to state digital services.",
+      "timeline": [
+        { "year": 2010, "event": "Launch of Internet Para Todos (RNI) as a free Wi-Fi network." },
+        { "year": 2011, "event": "Infoplazas and RNI integrated into broader digital inclusion push." },
+        { "year": 2020, "event": "Program modernization and continued expansion via RNI 2.0." }
+      ],
+      "metrics": {
+        "Corregimientos Target": 288,
+        "Population Reach Percentage": 80
+      },
+      "benefits": [
+        "Nationwide Wi-Fi coverage targeting 80% population reach",
+        "Focus on underserved corregimientos",
+        "Supports access to digital government services"
+      ],
+      "read_more": "https://www.internetparatodos.gob.pa/nosotros"
+    }
+  ],
   "e_government": {
     "institutional_milestones": [
       {
@@ -71,22 +67,18 @@
     ],
     "flagship_platforms": [
       {
-        "img_url":"",
         "name": "Panamá en Línea (Trámites en línea)",
         "purpose": "Single window for online procedures and payments; supports interoperability and digital signatures."
       },
       {
-        "img_url":"",
         "name": "Centro de Atención Ciudadana 311",
         "purpose": "Omnichannel citizen service desk assisting with government services and online procedures."
       },
       {
-        "img_url":"",
         "name": "Datos Abiertos",
         "purpose": "Open data portal for government datasets (e.g., RNI usage)."
       },
       {
-        "img_url":"",
         "name": "Municipios Digitales",
         "purpose": "Local government digital services and modernization initiatives coordinated by AIG."
       }
@@ -126,3 +118,4 @@
     }
   ]
 }
+

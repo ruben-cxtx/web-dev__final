@@ -1,9 +1,4 @@
 {
-  "meta": {
-    "last_updated": "2025-08-27",
-    "country": "Panama",
-    "notes": "Key milestones, spectrum, cables, public programs and 5G status for quick rendering in cards/timelines."
-  },
   "timeline": [
     {
       "year": "early-2000s",
@@ -85,7 +80,6 @@
   ],
   "ixp": [
     {
-      "img_url": "https://intered.org.pa/wp-content/uploads/2022/11/logo-intered-hd.png",
       "name": "InteRed Panamá (IXP)",
       "location": "Panama Digital Gateway, Panama City",
       "rfs": "2023",

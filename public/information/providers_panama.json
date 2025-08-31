@@ -1,8 +1,4 @@
 {
-  "meta": {
-    "last_updated": "2025-08-28",
-    "schema": "Brief provider cards with only essentials."
-  },
   "providers": [
     {
       "img_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnegocios.masmovilpanama.com%2Fimg%2Flogo-mas-movil.png&f=1&nofb=1&ipt=0852a845d97ede757bcf5abb11a072c06c5ebe17a7c3d61b2c99eb2d345b5791",
